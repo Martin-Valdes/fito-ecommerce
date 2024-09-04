@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "../NavBar/NavBar.jsx";
 
 import './HomeContainer.scss';
 
@@ -6,7 +7,7 @@ const HomeContainer = () => {
 
     return(
         <div>
-            hola
+            <NavBar/>
         </div>
     )
 
