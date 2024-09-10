@@ -1,18 +1,69 @@
 .footerBack {
   width: 100%;
-  height: 31.25rem;
-  background-image: url("../../img/hojas.png"), url("../../img/hojas.png"), url("../../img/hojas.png"),url("../../img/hojas.png");
-  background-position: left top, right top, center top,  center top;
+  height: 50rem;
+  background-image: url("../../img/hojas.png"), url("../../img/hojas.png"),
+    url("../../img/hojas.png"), url("../../img/hojas.png");
+  background-position: left top, right top, center top, center top;
   background-size: 43.75rem, 43.75rem, 43.75rem, 43.75rem;
   background-repeat: repeat, repeat, repeat, repeat;
   position: relative;
   .footerContainer {
-    height: 31.25rem;
+    height: 43.75rem;;
     width: 100%;
     background: linear-gradient(180deg, #49905aab 0%, #113719c7 100%);
-    position: absolute; 
-    top: 6.25rem; 
-    left: 0%; 
+    position: absolute;
+    top: 6.25rem;
+    left: 0%;
     transform: translate(0%, 12.5rem);
+    .upContainer {
+      display: flex;
+      padding: 3.125rem;
+      color: #fff;
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      .ulContainer {
+        width: 70%;
+        text-decoration: underline;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul {
+          list-style: none;
+        }
+        .icoContainer{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .downContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-left: 3.125rem;
+      .newContainer{
+        display: flex;
+        flex-direction: column;
+      }
+      div {
+        color: #fff;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img{
+          width: fit-content;
+          
+        }
+      }
+    }
   }
 }

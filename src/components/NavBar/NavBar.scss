@@ -29,6 +29,7 @@
       text-decoration: none;
       list-style: none;
       gap: 1.875rem;
+      z-index: 999;
       .liLinks {
         color: #fff;
         font-family: "Miltonian Tattoo";
@@ -79,8 +80,7 @@
     width: 100%;
     justify-content: flex-end;
     top: 10.625rem;
-    .whatsAppImg{
-
-    }
+    z-index: 999;
+   
   }
 }

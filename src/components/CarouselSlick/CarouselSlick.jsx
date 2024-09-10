@@ -7,14 +7,14 @@ import "./Carousel.scss";
 
 const CarouselSlick = ({ props }) => {
   const settings = {
-    dots: false,
+    dots: true,
+    pauseOnHover: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 0,
+    autoplaySpeed: 2000,
     cssEase: "linear",
     className: "slider variable-width",
     variableWidth: true,

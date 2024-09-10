@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./NavBar.scss";
 
@@ -11,10 +12,10 @@ const NavBar = () => {
         </div>
         <nav className="navContainer">
           <ul className="ulLinks">
-            <li className="liLinks">Home</li>
-            <li className="liLinks">Productos</li>
-            <li className="liLinks">Servicios</li>
-            <li className="liLinks">Contacto</li>
+           <li className="liLinks"><Link to="/" > Home </Link></li>
+            <li className="liLinks"><Link to="/products" >Productos</Link></li>
+            <li className="liLinks"><Link to="/services" >Servicios</Link></li>
+            <li className="liLinks"><Link to="/contact" >Contacto</Link></li>
           </ul>
         </nav>
         <section className="loginContainer">
