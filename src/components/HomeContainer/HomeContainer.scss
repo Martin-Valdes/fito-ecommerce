@@ -1,3 +1,165 @@
-.homeContainer{
-    height: 81.25rem;
+.homeContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  .backVideo {
+    width: 100%;
+    height: 100vh;
+    video {
+      position: absolute;
+      width: 100%;
+      z-index: -10;
+      top: 0;
+    }
+    .buttonContainer {
+      width: fit-content;
+      height: 100%;
+      position: relative;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 6.25rem;
+      align-items: end;
+      h1 {
+        width: 100%;
+        color: #fff;
+        font-family: "Miltonian Tattoo";
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      button {
+        width: 175px;
+        height: 44px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: rgba(49, 174, 62, 0.26);
+        color: white;
+        color: #fff;
+        font-family: Poppins;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+  .sendSection {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 12.5rem;
+    img {
+      width: 779px;
+      height: 364px;
+      flex-shrink: 0;
+    }
+    .textSend {
+      background-color: white;
+      position: absolute;
+      width: 594px;
+      height: 269px;
+      flex-shrink: 0;
+      text-align: left;
+      margin-left: 50rem;
+      display: flex;
+      align-items: center;
+      .h2 {
+        padding-left: 6.25rem;
+        color: #000;
+        font-family: Poppins;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+      .spanSend {
+        color: #000;
+        font-family: Poppins;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+  .aboutContainer {
+    width: 100%;
+    height: 663px;
+    margin: 3.125rem;
+    background-image: url("../../img/backcannavis.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      padding-left: 1.875rem;
+      color: #fff;
+      font-family: "Post No Bills Jaffna ExtraBold";
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+    }
+    p {
+      padding-left: 1.875rem;
+      color: #fff;
+      font-family: Poppins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+    h3 {
+      padding: 1.875rem;
+      color: #fff;
+      font-family: Poppins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+  .categoryContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+    .imgContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.875rem;
+      img {
+        width: 100%;
+      }
+      h4 {
+        color: #020202;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      p {
+        color: #000;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+    }
+  }
 }
