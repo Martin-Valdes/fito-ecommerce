@@ -1,16 +1,14 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar.jsx";
+
 
 import './HomeContainer.scss';
 
 const HomeContainer = () => {
 
     return(
-        <div>
-            <NavBar/>
+        <div className="homeContainer">
+            <p>hola</p>
         </div>
     )
-
 }
-
 export default HomeContainer;
