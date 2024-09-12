@@ -6,6 +6,7 @@ import ServiceFolder from "./components/ServiceFolder/ServiceFolder.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import FormInputProducts from "./components/adminProducts/FormInputProducts.jsx";
 
 import "./App.css";
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/services" element={<ServiceFolder />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<FormInputProducts/>}/>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
