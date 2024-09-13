@@ -1,0 +1,28 @@
+.containerProducts {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 6.25rem;
+  gap: 3.125rem;
+  z-index: 999;
+  position: relative;
+  .container {
+    width: 12.5rem;
+    height: fit-content;
+    .imgContainer {
+      .carousel {
+        button {
+          span {
+            color: black;
+          }
+        }
+      }
+    }
+    .containerDescription {
+      button {
+        position: relative;
+        z-index: 999;
+        margin-top: 0.625rem;
+      }
+    }
+  }
+}

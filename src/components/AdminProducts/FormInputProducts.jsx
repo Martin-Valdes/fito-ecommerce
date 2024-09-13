@@ -58,15 +58,18 @@ const FormInputProducts = () => {
       {idProduct ? (
         <div>
           <h1>Producto agregado</h1>
-          <RenderProducts/>
         </div>
       ) : (
-        <Form
-          dataForm={dataForm}
-          saveDataInput={saveDataInput}
-          handleFileInput={handleFileInput}
-          sendData={sendData}
-        />
+        <>
+        <h1>Nuevo Producto</h1>
+          <Form
+            dataForm={dataForm}
+            saveDataInput={saveDataInput}
+            handleFileInput={handleFileInput}
+            sendData={sendData}
+          />
+          <RenderProducts />
+        </>
       )}
     </div>
   );

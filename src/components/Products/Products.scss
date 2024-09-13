@@ -1,0 +1,27 @@
+.productsContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .searchContainer {
+    margin: 0.625rem;
+    position: relative;
+    z-index: 999;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .searchImg {
+      width: 2.125rem;
+      height: fit-content;
+      padding: 0.125rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .cardsProducts {
+    width: 70%;
+  }
+}

@@ -7,7 +7,8 @@ import Contact from "./components/Contact/Contact.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import FormInputProducts from "./components/adminProducts/FormInputProducts.jsx";
-
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
 function App() {

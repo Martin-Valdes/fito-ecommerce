@@ -1,34 +1,52 @@
 
-const FormComponent = ({ dataForm, saveDataInput, sendData, handleFileInput }) => {
+
+const FormComponent = ({
+  dataForm,
+  saveDataInput,
+  sendData,
+  handleFileInput,
+}) => {
   return (
     <div>
       <form onSubmit={sendData}>
-        <label htmlFor="nameProduct">Producto</label>
+        <label htmlFor="nameProduct" className="form-label">
+          Producto
+        </label>
         <input
+          className="form-control"
           type="text"
           id="nameProduct"
           name="nameProduct"
           value={dataForm.nameProduct}
           onChange={saveDataInput}
         />
-        <label htmlFor="description">Descripcion</label>
+        <label htmlFor="description" className="form-label">
+          Descripcion
+        </label>
         <input
+          className="form-control"
           type="text"
           id="description"
           name="description"
           value={dataForm.description}
           onChange={saveDataInput}
         />
-        <label htmlFor="cost">Costo</label>
+        <label htmlFor="cost" className="form-label">
+          Costo
+        </label>
         <input
+          className="form-control"
           type="text"
           id="cost"
           name="cost"
           value={dataForm.cost}
           onChange={saveDataInput}
         />
-        <label htmlFor="stock">Stock</label>
+        <label htmlFor="stock" className="form-label">
+          Stock
+        </label>
         <input
+          className="form-control"
           type="text"
           id="stock"
           name="stock"
@@ -36,6 +54,7 @@ const FormComponent = ({ dataForm, saveDataInput, sendData, handleFileInput }) =
           onChange={saveDataInput}
         />
         <input
+          className="formArchive form-control"
           type="file"
           id="img"
           name="img"
@@ -43,9 +62,8 @@ const FormComponent = ({ dataForm, saveDataInput, sendData, handleFileInput }) =
           onChange={handleFileInput}
           multiple
         />
-        <button type="submit">Send order</button>
+        <button type="submit" className="btn btn-success">Cargar</button>
       </form>
-
     </div>
   );
 };
