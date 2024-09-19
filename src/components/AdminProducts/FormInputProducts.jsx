@@ -6,9 +6,12 @@ import { db, storage } from "../../appFirebase/appFirebase.js";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import RenderProducts from "../RenderProducts/RenderProducts.jsx";
 
+
 import "./FormProducts.scss";
 
 const FormInputProducts = () => {
+
+  
   let urlImDesc;
   let archivosGuardados = [];
 

@@ -47,6 +47,8 @@
       padding-left: 3.125rem;
       .newContainer{
         display: flex;
+        justify-content: flex-start;
+        align-items: start;
         flex-direction: column;
       }
       div {
@@ -57,12 +59,10 @@
         font-weight: 500;
         line-height: normal;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        img{
-          width: fit-content;
-          
-        }
+        justify-content: left;
+        align-items: flex-start;
+        margin-bottom: 1.25rem;
+        
       }
     }
   }
