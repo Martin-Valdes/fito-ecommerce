@@ -1,13 +1,13 @@
 .containerProducts {
   display: flex;
-  flex-wrap: nowrap;
-  margin: 6.25rem;
-  gap: 3.125rem;
+  flex-wrap:wrap;
+  margin: 1.25rem;
+  gap: 1.875rem;
   z-index: 999;
   position: relative;
   .container {
     width: 12.5rem;
-    height: fit-content;
+    height: 21.875rem;
     .imgContainer {
       .carousel {
         button {
@@ -19,9 +19,21 @@
     }
     .containerDescription {
       button {
+      width: 100%;
         position: relative;
         z-index: 999;
         margin-top: 0.625rem;
+        height: 1.875rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h2{
+        font-size: 1.75rem;
+        margin-bottom: .625rem;
+      }
+      p{
+        margin: 0;
       }
     }
   }

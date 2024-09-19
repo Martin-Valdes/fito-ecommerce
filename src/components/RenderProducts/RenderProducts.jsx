@@ -96,12 +96,9 @@ const RenderProducts = () => {
             <section className="containerDescription">
               <h2>{list.nameProduct}</h2>
               <p>{list.description}</p>
-              <p>{list.stock}</p>
+              <p>Stock: {list.stock}</p>
               <p>Price: ${list.cost}</p>
               <button className="btn btn-dark">Detalles</button>
-              <button type="button" className="btn btn-info">
-                Agregar al carrito
-              </button>
             </section>
           </div>
         );

@@ -31,38 +31,38 @@ const NavBar = () => {
             <li className="liLinks">
               <Link to="/contact">Contacto</Link>
             </li>
-            {user.data && user.data.email === "valdesmartin@gmail.com" ? (
-              <Link to="/admin">ADMIN</Link>
-            ) : null}
-
-            {user ? (
-              <>
-                <p>Hola {user.data ? user.data.name : "Invitado"}!!!</p>
-                <img
-                  src={
-                    user.data
-                      ? user.data.picture
-                      : "../../img/defaultAvatar.png"
-                  }
-                  alt="Avatar"
-                />
-              </>
-            ) : (
-              <p>Hola Invitado!!!</p>
-            )}
-            {/* <img src={user.data ? user.data.picture : "../../img/"} alt="" /> */}
           </ul>
         </nav>
+        
+        
         <section className="loginContainer">
           <ul className="ulLogin">
-            <li className="liLogin">Registrarme</li>
             <li onClick={login} className="liLogin">
               Login
             </li>
-            <li onClick={logout} className="liLogin">
+            <li onClick={logout} className={user ? 'liLogin' : 'liLoginFalse'}>
               Logout
             </li>
           </ul>
+          <div className="adminContainer">
+          {user.data && user.data.email === "valdesmartin@gmail.com" ? (
+          <Link to="/admin">ADMIN</Link>
+        ) : null}
+
+        {user ? (
+          <>
+
+            <img className={user ? 'loginTrue' : 'loginFalse'}
+              src={
+                user.data ? user.data.picture : "../../img/defaultAvatar.png"
+              }
+              alt=""
+            />
+          </>
+        ) : (
+          null
+        )}
+        </div>
         </section>
         <div className="imgCartContainer">
           <img className="imgCart" src="../../img/Wheelbarrow.png" alt="" />
