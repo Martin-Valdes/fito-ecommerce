@@ -10,6 +10,7 @@ import FormInputProducts from "./components/AdminProducts/FormInputProducts.jsx"
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { ProtectedRoute } from "./ProtectedRoute/ProtectedRoute.jsx";
 import { AuthContext } from "./Context/AuthContext.jsx";
+import { ProductDetail } from "./components/ProductsDetail/ProductDetail.jsx";
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -28,6 +29,7 @@ function App() {
               <Route path="/products" element={<Products />} />
               <Route path="/services" element={<ServiceFolder />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/productDetail/:id" element={<ProductDetail/>}/>
               <Route path="/admin" element={
                 <ProtectedRoute>
                   <FormInputProducts />

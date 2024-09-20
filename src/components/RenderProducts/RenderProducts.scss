@@ -1,6 +1,6 @@
 .containerProducts {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   margin: 1.25rem;
   gap: 1.875rem;
   z-index: 999;
@@ -19,7 +19,7 @@
     }
     .containerDescription {
       button {
-      width: 100%;
+        width: 100%;
         position: relative;
         z-index: 999;
         margin-top: 0.625rem;
@@ -28,12 +28,15 @@
         align-items: center;
         justify-content: center;
       }
-      h2{
+      h2 {
         font-size: 1.75rem;
-        margin-bottom: .625rem;
+        margin-bottom: 0.625rem;
       }
-      p{
+      p {
         margin: 0;
+      }
+      a {
+        text-decoration: none;
       }
     }
   }

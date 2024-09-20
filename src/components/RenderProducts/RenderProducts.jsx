@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../appFirebase/appFirebase";
+import { Link } from "react-router-dom";
 
 import "./RenderProducts.scss";
 
@@ -22,6 +23,8 @@ const RenderProducts = () => {
     };
     getGallery();
   }, []);
+
+
 
   return (
     <div className="containerProducts">
@@ -98,7 +101,7 @@ const RenderProducts = () => {
               <p>{list.description}</p>
               <p>Stock: {list.stock}</p>
               <p>Price: ${list.cost}</p>
-              <button className="btn btn-dark">Detalles</button>
+              <Link to={`/productDetail/${list.id}`} ><button  className="btn btn-dark">Detalles</button></Link>
             </section>
           </div>
         );

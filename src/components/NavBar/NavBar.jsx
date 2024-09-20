@@ -6,7 +6,7 @@ import "./NavBar.scss";
 
 const NavBar = () => {
   const { login, logout, user } = useContext(authContext);
-  console.log(user)
+
 
   return (
     <>

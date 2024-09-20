@@ -25,7 +25,6 @@ const Footer = () => {
                 <li>Contacto</li>
               </ul>
               <ul>
-                <li>Registrarme</li>
                 <li>Login</li>
               </ul>
               <div className="icoContainer">
