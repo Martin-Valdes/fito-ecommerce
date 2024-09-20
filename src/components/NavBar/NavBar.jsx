@@ -6,6 +6,7 @@ import "./NavBar.scss";
 
 const NavBar = () => {
   const { login, logout, user } = useContext(authContext);
+  console.log(user)
 
   return (
     <>
@@ -45,7 +46,7 @@ const NavBar = () => {
             </li>
           </ul>
           <div className="adminContainer">
-          {user.data && user.data.email === "valdesmartin@gmail.com" ? (
+          {user.data && user.data.email === "fitogrowshop23@gmail.com" ? (
           <Link to="/admin">ADMIN</Link>
         ) : null}
 
