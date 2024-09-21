@@ -7,7 +7,6 @@ import "./Carousel.scss";
 
 const CarouselSlick = ({ props }) => {
   const settings = {
-    dots: true,
     pauseOnHover: true,
     infinite: true,
     slidesToShow: 1,
@@ -19,12 +18,12 @@ const CarouselSlick = ({ props }) => {
     className: "slider variable-width",
     variableWidth: true,
   };
-
+  console.log(props);
   return (
     <Slider {...settings}>
       {props.map((img, index) => (
         <div className="imgCarrusel" key={index}>
-          <img src={`../../img/${img}`} />
+          <img src={`${img}`} />
         </div>
       ))}
     </Slider>
