@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./Carousel.scss";
 
-const CarouselSlick = ({ props }) => {
+const CarouselSlick = ( {props} ) => {
+
   const settings = {
     pauseOnHover: true,
     infinite: true,
@@ -18,12 +19,12 @@ const CarouselSlick = ({ props }) => {
     className: "slider variable-width",
     variableWidth: true,
   };
-  console.log(props);
+
   return (
     <Slider {...settings}>
       {props.map((img, index) => (
         <div className="imgCarrusel" key={index}>
-          <img src={`${img}`} />
+          <img src={`../../img/images/${img}`} />
         </div>
       ))}
     </Slider>

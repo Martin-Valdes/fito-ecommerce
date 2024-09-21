@@ -6,29 +6,8 @@ import "./HomeContainer.scss";
 const HomeContainer = () => {
 
 
-  // const img = ["1_BIG_ONE_FAMILIA.webp", "1_PK_13-14_FAMILIA.webp", "1_TOP_BUD_FAMILIA.webp","A30105_Jsr4DId.webp", "A30111_0LRYeMa - copia.webp","A30186_mLwe0JX.webp"];
-  const images = import.meta.glob('/assets/*.*');
+  const img = ["1_BIG_ONE_FAMILIA.webp", "1_PK_13-14_FAMILIA.webp", "1_TOP_BUD_FAMILIA.webp","A30105_Jsr4DId.webp", "A30111_0LRYeMa - copia.webp","A30186_mLwe0JX.webp", "A31053_hwdHCyM.webp", "A33901.webp", "A33902.webp", "alga blom.webp", "bioinsecticida.webp", "desmo acrilico.webp", "desmo calavera.webp", "desmo metal spiderman.webp", "desmo metal spiderman.webp", "desmo metalico 4 partes.webp", "desmo para hash.webp", "desmo pikachu.webp", "desmo tainer.webp", "mini bong tornasolado.webp", "pipa turbina.webp", "supermagro.webp", "top paf para botellas en grl.webp"];
 
-  const loadImages = async () => {
-    const imageModules = await Promise.all(
-      Object.keys(images).map((path) => images[path]())
-    );
-  
-    // Generar un array de las rutas
-    const imagesArray = Object.keys(images);
-  
-    console.log(imagesArray); // Array con las rutas de las imágenes
-    return imagesArray;
-  };
-
-  const [imagePaths, setImagePaths] = useState([]);
-
-  useEffect(() => {
-    loadImages().then((paths) => {
-      setImagePaths(paths);
-    });
-  }, []);
-console.log(imagePaths)
   return (
     <div className="homeContainer">
       <section className="backVideo">
@@ -48,7 +27,7 @@ console.log(imagePaths)
         </div>
       </section>
       <section className="carousellContainer">
-        <CarouselSlick props={imagePaths} />
+        <CarouselSlick props={img} />
       </section>
       <section className="aboutContainer">
         <h2>Sobre FITO GROW SHOP</h2>
