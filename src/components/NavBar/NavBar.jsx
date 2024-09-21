@@ -65,14 +65,18 @@ const NavBar = () => {
               </>
             ) : null}
           </div>
+          <div className="iconContainer">
+            <Link to="https://www.instagram.com/fitogrowshop?igsh=YWVoMTV6bXJ5dHpi&utm_source=qr">
+              <img
+                className="iconSocial"
+                src="../../img/Instagram.png"
+                alt=""
+              />
+            </Link>
+          </div>
         </section>
         <div className="imgCartContainer">
           <img className="imgCart" src="../../img/Wheelbarrow.png" alt="" />
-        </div>
-        <div className="iconContainer">
-          <Link to="https://www.instagram.com/fitogrowshop?igsh=YWVoMTV6bXJ5dHpi&utm_source=qr">
-            <img className="iconSocial" src="../../img/Instagram.png" alt="" />
-          </Link>
         </div>
         <div className="iconWhatsappContainer">
           <Link to="https://wa.me/59894588350?text=Hola%2C%20estoy%20interesado">
