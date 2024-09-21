@@ -75,10 +75,7 @@ const RenderProducts = () => {
                   data-bs-target={`#${carouselId}`}
                   data-bs-slide="prev"
                 >
-                  <span
-                    className="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
+                  <img className="imgArrowIzquierda" src="../../img/flecha-izquierda.png" alt="Next" />
                   <span className="visually-hidden">Previous</span>
                 </button>
                 <button
@@ -87,10 +84,7 @@ const RenderProducts = () => {
                   data-bs-target={`#${carouselId}`}
                   data-bs-slide="next"
                 >
-                  <span
-                    className="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
+                  <img className="imgArrow" src="../../img/flecha-correcta.png" alt="Next" />
                   <span className="visually-hidden">Next</span>
                 </button>
               </div>
@@ -98,7 +92,7 @@ const RenderProducts = () => {
 
             <section className="containerDescription">
               <h2>{list.nameProduct}</h2>
-              <p>{list.description}</p>
+              
               <p>Stock: {list.stock}</p>
               <p>Price: ${list.cost}</p>
               <Link to={`/productDetail/${list.id}`} ><button  className="btn btn-dark">Detalles</button></Link>

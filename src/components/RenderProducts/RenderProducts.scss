@@ -11,6 +11,12 @@
     .imgContainer {
       .carousel {
         button {
+          .imgArrow {
+            width: 1rem;
+          }
+          .imgArrowIzquierda {
+            width: 1.75rem;
+          }
           span {
             color: black;
           }
@@ -29,7 +35,7 @@
         justify-content: center;
       }
       h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         margin-bottom: 0.625rem;
       }
       p {

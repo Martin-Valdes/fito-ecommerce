@@ -1,5 +1,3 @@
-
-
 const FormComponent = ({
   dataForm,
   saveDataInput,
@@ -20,17 +18,19 @@ const FormComponent = ({
           value={dataForm.nameProduct}
           onChange={saveDataInput}
         />
-        <label htmlFor="description" className="form-label">
+        <div class="mb-3">
+          <label htmlFor="description" class="form-label">
           Descripcion
-        </label>
-        <input
-          className="form-control"
-          type="text"
-          id="description"
-          name="description"
-          value={dataForm.description}
-          onChange={saveDataInput}
-        />
+          </label>
+          <textarea
+            class="form-control"
+            id="description"
+            rows="3"
+            name="description"
+            value={dataForm.description}
+            onChange={saveDataInput}
+          ></textarea>
+        </div>
         <label htmlFor="cost" className="form-label">
           Costo
         </label>
@@ -62,7 +62,12 @@ const FormComponent = ({
           onChange={handleFileInput}
           multiple
         />
-        <button type="submit" className="btn btn-success">Cargar</button>
+        <button type="submit" className="btn btn-success">
+          Cargar
+        </button>
+        <button type="submit" className="deleteProduct btn btn-success">
+          Eliminar
+        </button>
       </form>
     </div>
   );

@@ -1,22 +1,25 @@
-.formContainer{
-    width: 100%;
-    height: 100vh;
-    z-index: 1999;
-    margin-top: 6.25rem;
+.formContainer {
+  width: 100%;
+  height: 100vh;
+  z-index: 1999;
+  margin-top: 6.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+  form {
+    z-index: 999;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 999;
-    form{
-        z-index: 999;
-        display: flex;
-        flex-direction: column;
-        .formArchive{
-            margin-top:  1.25rem;
-        }
-        button{
-            margin-top: 1.25rem;
-        }
+    .formArchive {
+      margin-top: 1.25rem;
     }
+    button {
+        margin-top: 1.25rem;
+    }
+  }
+  .deleteProduct {
+    background-color: red;
+  }
 }
