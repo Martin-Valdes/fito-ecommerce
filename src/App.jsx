@@ -11,11 +11,11 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import { ProtectedRoute } from "./ProtectedRoute/ProtectedRoute.jsx";
 import { AuthContext } from "./Context/AuthContext.jsx";
 import { ProductDetail } from "./components/ProductsDetail/ProductDetail.jsx";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
 
 function App() {
   return (
@@ -23,20 +23,23 @@ function App() {
       <div>
         <GoogleOAuthProvider clientId="115603747376-nns3nm0rf948p7ardj9ge7s6pohdlsl9.apps.googleusercontent.com">
           <AuthContext>
+            <ScrollToTop />
             <NavBar />
             <Routes>
               <Route path="/" element={<HomeContainer />} />
               <Route path="/products" element={<Products />} />
               <Route path="/services" element={<ServiceFolder />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/productDetail/:id" element={<ProductDetail/>}/>
-              <Route path="/admin" element={
-                <ProtectedRoute>
-                  <FormInputProducts />
-                </ProtectedRoute>
-                }/>
+              <Route path="/productDetail/:id" element={<ProductDetail />} />
+              <Route
+                path="/admin"
+                element={
+                  <ProtectedRoute>
+                    <FormInputProducts />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="*" element={<Navigate to="/" />} />
-              
             </Routes>
             <Footer />
           </AuthContext>

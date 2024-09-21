@@ -6,7 +6,7 @@ import "./HomeContainer.scss";
 const HomeContainer = () => {
 
 
-  const img = ["1_BIG_ONE_FAMILIA.webp", "1_PK_13-14_FAMILIA.webp", "1_TOP_BUD_FAMILIA.webp","A30105_Jsr4DId.webp", "A30111_0LRYeMa - copia.webp","A30186_mLwe0JX.webp", "A31053_hwdHCyM.webp", "A33901.webp", "A33902.webp", "alga blom.webp", "bioinsecticida.webp", "desmo acrilico.webp", "desmo calavera.webp", "desmo metal spiderman.webp", "desmo metal spiderman.webp", "desmo metalico 4 partes.webp", "desmo para hash.webp", "desmo pikachu.webp", "desmo tainer.webp", "mini bong tornasolado.webp", "pipa turbina.webp", "supermagro.webp", "top paf para botellas en grl.webp"];
+  const img = ["1_BIG_ONE_FAMILIA.webp", "1_PK_13-14_FAMILIA.webp", "1_TOP_BUD_FAMILIA.webp","A30105_Jsr4DId.webp", "A30111_0LRYeMa - copia.webp","A30186_mLwe0JX.webp", "A31053_hwdHCyM.webp", "A33901.webp", "A33902.webp", "alga blom.webp", "bioinsecticida.webp", "desmo acrilico.webp", "desmo calavera.webp", "desmo metal spiderman.webp", "desmo metalico 4 partes.webp", "desmo para hash.webp", "desmo pikachu.webp", "desmo tainer.webp", "mini bong tornasolado.webp", "pipa turbina.webp", "supermagro.webp", "top paf para botellas en grl.webp"];
 
   return (
     <div className="homeContainer">

@@ -1,11 +1,11 @@
 import axios from "axios";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 
 export const authContext = createContext();
 
 export const AuthContext = ({ children }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState("");
 
   const login = useGoogleLogin({
     onSuccess: async (tokenResponse) => {

@@ -1,8 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { authContext } from "../../Context/AuthContext";
 
 import "./Footer.scss";
 
 const Footer = () => {
+
+  const { login } = useContext(authContext);
+
   return (
     <>
       <section className="footerBack">
@@ -17,15 +23,15 @@ const Footer = () => {
             </div>
             <div className="ulContainer">
               <ul>
-                <li>Home</li>
-                <li>Productos</li>
+                <Link to="/"><li>Home</li></Link>
+                <Link to="/products"><li>Productos</li></Link>
               </ul>
               <ul>
-                <li>Servicios</li>
-                <li>Contacto</li>
+                <Link to="/services"><li>Servicios</li></Link>
+                <Link to="/contact"><li>Contacto</li></Link>
               </ul>
               <ul>
-                <li>Login</li>
+                <li  onClick={login}>Login</li>
               </ul>
               <div className="icoContainer">
                 <img
