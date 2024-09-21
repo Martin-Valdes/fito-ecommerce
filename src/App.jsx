@@ -23,7 +23,7 @@ function App() {
       <div>
         <GoogleOAuthProvider clientId="115603747376-nns3nm0rf948p7ardj9ge7s6pohdlsl9.apps.googleusercontent.com">
           <AuthContext>
-            <ScrollToTop />
+            
             <NavBar />
             <Routes>
               <Route path="/" element={<HomeContainer />} />
