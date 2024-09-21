@@ -6,7 +6,6 @@ import { authContext } from "../../Context/AuthContext";
 import "./Footer.scss";
 
 const Footer = () => {
-
   const { login } = useContext(authContext);
 
   return (
@@ -23,28 +22,24 @@ const Footer = () => {
             </div>
             <div className="ulContainer">
               <ul>
-                <Link to="/"><li>Home</li></Link>
-                <Link to="/products"><li>Productos</li></Link>
+                <Link to="/">
+                  <li>Home</li>
+                </Link>
+                <Link to="/products">
+                  <li>Productos</li>
+                </Link>
               </ul>
               <ul>
-                <Link to="/services"><li>Servicios</li></Link>
-                <Link to="/contact"><li>Contacto</li></Link>
+                <Link to="/services">
+                  <li>Servicios</li>
+                </Link>
+                <Link to="/contact">
+                  <li>Contacto</li>
+                </Link>
               </ul>
               <ul>
-                <li  onClick={login}>Login</li>
+                <li onClick={login}>Login</li>
               </ul>
-              <div className="icoContainer">
-                <img
-                  className="icoInstagram"
-                  src="../../img/Instagram.png"
-                  alt=""
-                />
-                <img
-                  className="icoFacebook"
-                  src="../../img/Facebook.png"
-                  alt=""
-                />
-              </div>
             </div>
           </section>
           <section className="downContainer">
@@ -56,6 +51,16 @@ const Footer = () => {
               <div>
                 <img src="../../img/WhatsApp.png" alt="" />
                 <p>(+598) 094 588 350</p>
+              </div>
+              <div className="icoContainer">
+                <Link to="https://www.instagram.com/fitogrowshop?igsh=YWVoMTV6bXJ5dHpi&utm_source=qr">
+                  <img
+                    className="icoInstagram"
+                    src="../../img/Instagram.png"
+                    alt=""
+                  />
+                </Link>
+                <p>Instrabgram</p>
               </div>
             </div>
             <div>

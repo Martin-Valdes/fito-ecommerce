@@ -22,7 +22,6 @@ export const ProductDetail = () => {
 
   return (
     <div className="containerProducts">
-      <h1>{prod.nameProduct}</h1>
       <div className="container ">
         <div className="imgContainer">
           <div id="carousel" className="carousel slide">
@@ -31,15 +30,15 @@ export const ProductDetail = () => {
                 .filter((key) => key.startsWith("img"))
                 .map((imgKey, imgIndex) => (
                   <button
-                    key={imgKey}
+                  key={imgKey}
                     type="button"
                     data-bs-target="#carousel"
                     data-bs-slide-to={imgIndex}
                     className={imgIndex === 0 ? "active" : ""}
                     aria-current={imgIndex === 0 ? "true" : undefined}
                     aria-label={`Slide ${imgIndex + 1}`}
-                  ></button>
-                ))}
+                    ></button>
+                  ))}
             </div>
 
             <div className="carousel-inner">
@@ -47,7 +46,7 @@ export const ProductDetail = () => {
                 .filter((key) => key.startsWith("img"))
                 .map((imgKey, imgIndex) => (
                   <div
-                    key={imgKey}
+                  key={imgKey}
                     className={`carousel-item ${
                       imgIndex === 0 ? "active" : ""
                     }`}
@@ -56,7 +55,7 @@ export const ProductDetail = () => {
                       className="d-block w-100"
                       src={prod[imgKey]}
                       alt={`Image ${imgKey}`}
-                    />
+                      />
                   </div>
                 ))}
             </div>
@@ -67,10 +66,7 @@ export const ProductDetail = () => {
               data-bs-target="#carousel"
               data-bs-slide="prev"
             >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
+              <img className="imgArrowIzquierda" src="../../img/flecha-izquierda.png" alt="Next" />
               <span className="visually-hidden">Previous</span>
             </button>
             <button
@@ -79,19 +75,20 @@ export const ProductDetail = () => {
               data-bs-target="#carousel"
               data-bs-slide="next"
             >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
+              <img className="imgArrowIzquierda" src="../../img/flecha-correcta.png" alt="Next" />
               <span className="visually-hidden">Next</span>
             </button>
           </div>
         </div>
       </div>
+      <section>
+      <h1>{prod.nameProduct}</h1>
       <section className="containerInfoProduct">
         <p>{prod.description}</p>
         <p>{prod.stock}</p>
         <h2>{prod.price}</h2>
+      </section>
+
       </section>
     </div>
   );

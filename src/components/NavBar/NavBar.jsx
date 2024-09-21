@@ -6,20 +6,20 @@ import "./NavBar.scss";
 
 const NavBar = () => {
   const { login, logout, user } = useContext(authContext);
-  console.log(user)
+  console.log(user);
 
   return (
     <>
       <section className="navBarContainer">
-        
-          <div className="containerLogo"><Link to="/">
+        <div className="containerLogo">
+          <Link to="/">
             <img
               className="logoNav"
               src="../../img/imageedit_5_3141996671.gif"
               alt=""
-              />
-              </Link>
-          </div>
+            />
+          </Link>
+        </div>
         <nav className="navContainer">
           <ul className="ulLinks">
             <li className="liLinks">
@@ -70,15 +70,18 @@ const NavBar = () => {
           <img className="imgCart" src="../../img/Wheelbarrow.png" alt="" />
         </div>
         <div className="iconContainer">
-          <img className="iconSocial" src="../../img/Instagram.png" alt="" />
-          <img className="iconSocial" src="../../img/Facebook3.png" alt="" />
+          <Link to="https://www.instagram.com/fitogrowshop?igsh=YWVoMTV6bXJ5dHpi&utm_source=qr">
+            <img className="iconSocial" src="../../img/Instagram.png" alt="" />
+          </Link>
         </div>
         <div className="iconWhatsappContainer">
-          <img
-            className="whatsAppImg"
-            src="../../img/WhatsAppFixed.png"
-            alt=""
-          />
+          <Link to="https://wa.me/59894588350?text=Hola%2C%20estoy%20interesado">
+            <img
+              className="whatsAppImg"
+              src="../../img/WhatsAppFixed.png"
+              alt=""
+            />
+          </Link>
         </div>
       </section>
     </>
