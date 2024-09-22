@@ -92,7 +92,7 @@ const RenderProducts = () => {
 
             <section className="containerDescription">
               <h2>{list.nameProduct}</h2>
-              
+              <p>Categoría: {list.category}</p>
               <p>Stock: {list.stock}</p>
               <p>Price: ${list.cost}</p>
               <Link to={`/productDetail/${list.id}`} ><button  className="btn btn-dark">Detalles</button></Link>

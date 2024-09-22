@@ -20,6 +20,7 @@ const FormInputProducts = () => {
     description: "",
     cost: "",
     stock: "",
+    category: "",
   });
   const [idProduct, setIdProduct] = useState("");
 

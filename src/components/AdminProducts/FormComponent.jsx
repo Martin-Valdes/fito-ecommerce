@@ -42,6 +42,17 @@ const FormComponent = ({
           value={dataForm.cost}
           onChange={saveDataInput}
         />
+        <label htmlFor="category" className="form-label">
+          Categoría
+        </label>
+        <input
+          className="form-control"
+          type="text"
+          id="category"
+          name="category"
+          value={dataForm.category}
+          onChange={saveDataInput}
+        />
         <label htmlFor="stock" className="form-label">
           Stock
         </label>

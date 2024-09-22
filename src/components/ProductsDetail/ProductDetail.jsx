@@ -7,6 +7,7 @@ import "./ProductDetail.scss";
 
 export const ProductDetail = () => {
   const [prod, setProd] = useState([]);
+  const [value, setValue] = useState(1);
   const { id } = useParams();
 
   useEffect(() => {
@@ -20,9 +21,14 @@ export const ProductDetail = () => {
     });
   }, [id]);
 
+  const cuantityRender = (number) => {
+    setValue(number);
+    console.log(value);
+  };
+
   return (
-    <div className="containerProducts">
-      <div className="container ">
+    <div className="containerProductsDetail">
+      <div className="containerDetail">
         <div className="imgContainer">
           <div id="carousel" className="carousel slide">
             <div className="carousel-indicators">
@@ -30,15 +36,15 @@ export const ProductDetail = () => {
                 .filter((key) => key.startsWith("img"))
                 .map((imgKey, imgIndex) => (
                   <button
-                  key={imgKey}
+                    key={imgKey}
                     type="button"
                     data-bs-target="#carousel"
                     data-bs-slide-to={imgIndex}
                     className={imgIndex === 0 ? "active" : ""}
                     aria-current={imgIndex === 0 ? "true" : undefined}
                     aria-label={`Slide ${imgIndex + 1}`}
-                    ></button>
-                  ))}
+                  ></button>
+                ))}
             </div>
 
             <div className="carousel-inner">
@@ -46,7 +52,7 @@ export const ProductDetail = () => {
                 .filter((key) => key.startsWith("img"))
                 .map((imgKey, imgIndex) => (
                   <div
-                  key={imgKey}
+                    key={imgKey}
                     className={`carousel-item ${
                       imgIndex === 0 ? "active" : ""
                     }`}
@@ -55,7 +61,7 @@ export const ProductDetail = () => {
                       className="d-block w-100"
                       src={prod[imgKey]}
                       alt={`Image ${imgKey}`}
-                      />
+                    />
                   </div>
                 ))}
             </div>
@@ -66,7 +72,11 @@ export const ProductDetail = () => {
               data-bs-target="#carousel"
               data-bs-slide="prev"
             >
-              <img className="imgArrowIzquierda" src="../../img/flecha-izquierda.png" alt="Next" />
+              <img
+                className="imgArrowIzquierda"
+                src="../../img/flecha-izquierda.png"
+                alt="Next"
+              />
               <span className="visually-hidden">Previous</span>
             </button>
             <button
@@ -75,20 +85,56 @@ export const ProductDetail = () => {
               data-bs-target="#carousel"
               data-bs-slide="next"
             >
-              <img className="imgArrowIzquierda" src="../../img/flecha-correcta.png" alt="Next" />
+              <img
+                className="imgArrowIzquierda"
+                src="../../img/flecha-correcta.png"
+                alt="Next"
+              />
               <span className="visually-hidden">Next</span>
             </button>
           </div>
         </div>
       </div>
-      <section>
-      <h1>{prod.nameProduct}</h1>
-      <section className="containerInfoProduct">
-        <p>{prod.description}</p>
-        <p>{prod.stock}</p>
-        <h2>{prod.price}</h2>
-      </section>
+      <section className="infoDetailContainer">
+        <h1>{prod.nameProduct}</h1>
+        <section className="containerInfoProduct">
+          <p>Información: {prod.description}</p>
+          <p>Stock: {prod.stock}</p>
+          <div className="cuantityContainer">
+            <p>Cantidad </p>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                {value}
+              </button>
+              <ul className="dropdown-menu">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((number) => (
+                  <li
+                    key={number}
+                    onClick={() => cuantityRender(number)}
+                    className="dropdown-item"
+                  >
+                    {number}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
+          <h2>$ {prod.cost}</h2>
+          <section className="sectionButtons">
+            <button type="button" class="btn btn-dark">
+              Comprar
+            </button>
+            <button type="button" class="btnBuy btn btn-dark">
+              Agregar al Carrito
+            </button>
+          </section>
+        </section>
       </section>
     </div>
   );
