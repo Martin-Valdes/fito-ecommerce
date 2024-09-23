@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ServiceFolder = () => {
+const ItemCount = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const ServiceFolder = () => {
   )
 }
 
-export default ServiceFolder
+export default ItemCount

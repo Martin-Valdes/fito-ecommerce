@@ -44,6 +44,12 @@
       a {
         text-decoration: none;
       }
+      .adminMode{
+        display: inline;
+      }
+      .userMode{
+        display: none;
+      }
     }
   }
 }

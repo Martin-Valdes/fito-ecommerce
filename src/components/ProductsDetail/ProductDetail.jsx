@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../appFirebase/appFirebase";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../Context/CartContext";
 
 import "./ProductDetail.scss";
 
 export const ProductDetail = () => {
+  const { addProduct } = useContext(CartContext);
   const [prod, setProd] = useState([]);
   const [value, setValue] = useState(1);
   const { id } = useParams();
@@ -24,7 +26,7 @@ export const ProductDetail = () => {
 
   const cuantityRender = (number) => {
     setValue(number);
-    console.log(value);
+    setProd({ ...prod, cantidad: number });
   };
 
   return (
@@ -99,7 +101,7 @@ export const ProductDetail = () => {
       <section className="infoDetailContainer">
         <h1>{prod.nameProduct}</h1>
         <section className="containerInfoProduct">
-          <p className="pTitle">Informacion</p>
+          <p className="pTitle">Descripción:</p>
           <p>{prod.description}</p>
           <p className="pTitle">Stock: {prod.stock}</p>
           <div className="cuantityContainer">
@@ -129,15 +131,20 @@ export const ProductDetail = () => {
 
           <h2>$ {prod.cost}</h2>
           <section className="sectionButtons">
-            <Link>
-              <button type="button" class="btnBuy btn btn-dark">
-                Comprar
-              </button>
-            </Link>
 
-            <button type="button" class="btnBuyCart btn btn-dark">
+            <Link to="/cart">
+            <button
+              type="button"
+              onClick={() => {
+                 if(!prod.cantidad) {
+                  prod.cantidad = 1
+                 }
+                addProduct(prod)}}
+              class="btnBuyCart btn btn-dark"
+            >
               Agregar al Carrito
             </button>
+            </Link>
           </section>
         </section>
       </section>

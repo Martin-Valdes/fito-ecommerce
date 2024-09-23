@@ -72,7 +72,7 @@ const FormInputProducts = () => {
             handleFileInput={handleFileInput}
             sendData={sendData}
           />
-          <RenderProducts />
+          <RenderProducts edit={true} />
         </>
       )}
     </div>

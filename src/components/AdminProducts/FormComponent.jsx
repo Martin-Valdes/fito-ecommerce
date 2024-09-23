@@ -76,9 +76,6 @@ const FormComponent = ({
         <button type="submit" className="btn btn-success">
           Cargar
         </button>
-        <button type="submit" className="deleteProduct btn btn-success">
-          Eliminar
-        </button>
       </form>
     </div>
   );

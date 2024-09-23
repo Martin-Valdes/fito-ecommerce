@@ -2,15 +2,17 @@ import React from "react";
 import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
 import HomeContainer from "./components/HomeContainer/HomeContainer.jsx";
 import Products from "./components/Products/Products.jsx";
-import ServiceFolder from "./components/ServiceFolder/ServiceFolder.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import { Cart } from "./components/Cart/Cart.jsx";
+import CheckOut from "./components/CheckOut/CheckOut.jsx";
 import FormInputProducts from "./components/AdminProducts/FormInputProducts.jsx";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { ProtectedRoute } from "./ProtectedRoute/ProtectedRoute.jsx";
 import { AuthContext } from "./Context/AuthContext.jsx";
 import { ProductDetail } from "./components/ProductsDetail/ProductDetail.jsx";
+import { CartProvider } from "./Context/CartContext.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -23,25 +25,29 @@ function App() {
       <div>
         <GoogleOAuthProvider clientId="115603747376-nns3nm0rf948p7ardj9ge7s6pohdlsl9.apps.googleusercontent.com">
           <AuthContext>
-            <ScrollToTop/>
-            <NavBar />
-            <Routes>
-              <Route path="/" element={<HomeContainer />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/services" element={<ServiceFolder />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/productDetail/:id" element={<ProductDetail />} />
-              <Route
-                path="/admin"
-                element={
-                  <ProtectedRoute>
-                    <FormInputProducts />
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
-            <Footer />
+            <ScrollToTop />
+            <CartProvider>
+              <NavBar />
+              <Routes>
+                <Route path="/" element={<HomeContainer />} />
+                <Route path="/products" element={<Products />} />
+                {/* <Route path="/services" element={<Services />} /> */}
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/productDetail/:id" element={<ProductDetail />} />
+                <Route path="/cart" element={<Cart/>}/>
+                <Route path="/checkout" element={<CheckOut/>} />
+                <Route
+                  path="/admin"
+                  element={
+                    <ProtectedRoute>
+                      <FormInputProducts />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path="*" element={<Navigate to="/" />} />
+              </Routes>
+              <Footer />
+            </CartProvider>
           </AuthContext>
         </GoogleOAuthProvider>
       </div>

@@ -1,0 +1,20 @@
+.containerWidget{
+    width: 3.125rem;
+    .cartWidget{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .imgCart{
+            position: absolute;
+        }
+        p{
+            position: absolute;
+            color: rgb(177, 25, 25);
+            font-size: 1.25rem;
+            font-weight: 600;
+            font-family: Poppins;
+            padding-bottom: .625rem;
+        }
+    }
+}

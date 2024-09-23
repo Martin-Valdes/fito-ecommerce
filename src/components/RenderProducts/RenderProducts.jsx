@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { getDocs, collection } from "firebase/firestore";
+import {
+  getDocs,
+  getDoc,
+  doc,
+  collection,
+  deleteDoc,
+} from "firebase/firestore";
 import { db } from "../../appFirebase/appFirebase";
 import { Link } from "react-router-dom";
 
 import "./RenderProducts.scss";
 
-const RenderProducts = () => {
+const RenderProducts = ({ edit }) => {
   const [gallery, setGallery] = useState([]);
 
   useEffect(() => {
@@ -24,7 +30,11 @@ const RenderProducts = () => {
     getGallery();
   }, []);
 
+  const deleteProduct = (idProduct) => {
+    const querySnapshot = doc(db, "products", idProduct);
 
+    deleteDoc(querySnapshot);
+  };
 
   return (
     <div className="containerProducts">
@@ -75,7 +85,11 @@ const RenderProducts = () => {
                   data-bs-target={`#${carouselId}`}
                   data-bs-slide="prev"
                 >
-                  <img className="imgArrowIzquierda" src="../../img/flecha-izquierda.png" alt="Next" />
+                  <img
+                    className="imgArrowIzquierda"
+                    src="../../img/flecha-izquierda.png"
+                    alt="Next"
+                  />
                   <span className="visually-hidden">Previous</span>
                 </button>
                 <button
@@ -84,7 +98,11 @@ const RenderProducts = () => {
                   data-bs-target={`#${carouselId}`}
                   data-bs-slide="next"
                 >
-                  <img className="imgArrow" src="../../img/flecha-correcta.png" alt="Next" />
+                  <img
+                    className="imgArrow"
+                    src="../../img/flecha-correcta.png"
+                    alt="Next"
+                  />
                   <span className="visually-hidden">Next</span>
                 </button>
               </div>
@@ -95,7 +113,15 @@ const RenderProducts = () => {
               <p>Categoría: {list.category}</p>
               <p>Stock: {list.stock}</p>
               <p>Price: ${list.cost}</p>
-              <Link to={`/productDetail/${list.id}`} ><button  className="btn btn-dark">Detalles</button></Link>
+              <Link to={`/productDetail/${list.id}`}>
+                <button className="btn btn-dark">Detalles</button>
+              </Link>
+              <button
+                onClick={() => deleteProduct(list.id)}
+                className={!edit ? "userMode" : "adminMode"}
+              >
+                Delete
+              </button>
             </section>
           </div>
         );

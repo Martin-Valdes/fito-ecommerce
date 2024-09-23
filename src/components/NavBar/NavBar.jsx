@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../Context/AuthContext";
+import CartWidget from "./CartWidget";
 
 import "./NavBar.scss";
 
 const NavBar = () => {
   const { login, logout, user } = useContext(authContext);
-  console.log(user);
 
   return (
     <>
@@ -76,7 +76,7 @@ const NavBar = () => {
           </div>
         </section>
         <div className="imgCartContainer">
-          <img className="imgCart" src="../../img/Wheelbarrow.png" alt="" />
+          <CartWidget/>
         </div>
         <div className="iconWhatsappContainer">
           <Link to="https://wa.me/59894588350?text=Hola%2C%20estoy%20interesado">
