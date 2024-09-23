@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../appFirebase/appFirebase";
+import { Link } from "react-router-dom";
 
 import "./ProductDetail.scss";
 
@@ -98,10 +99,11 @@ export const ProductDetail = () => {
       <section className="infoDetailContainer">
         <h1>{prod.nameProduct}</h1>
         <section className="containerInfoProduct">
-          <p>Información: {prod.description}</p>
-          <p>Stock: {prod.stock}</p>
+          <p className="pTitle">Informacion</p>
+          <p>{prod.description}</p>
+          <p className="pTitle">Stock: {prod.stock}</p>
           <div className="cuantityContainer">
-            <p>Cantidad </p>
+            <p className="pTitle">Cantidad: </p>
             <div class="dropdown">
               <button
                 class="btn btn-secondary dropdown-toggle"
@@ -127,10 +129,13 @@ export const ProductDetail = () => {
 
           <h2>$ {prod.cost}</h2>
           <section className="sectionButtons">
-            <button type="button" class="btn btn-dark">
-              Comprar
-            </button>
-            <button type="button" class="btnBuy btn btn-dark">
+            <Link>
+              <button type="button" class="btnBuy btn btn-dark">
+                Comprar
+              </button>
+            </Link>
+
+            <button type="button" class="btnBuyCart btn btn-dark">
               Agregar al Carrito
             </button>
           </section>
