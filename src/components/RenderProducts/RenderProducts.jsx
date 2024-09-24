@@ -70,8 +70,8 @@ const RenderProducts = ({ edit }) => {
                           imgIndex === 0 ? "active" : ""
                         }`}
                       >
-                        <img
-                          className="d-block w-100"
+                        <img 
+                          className="imgProduct d-block w-100"
                           src={list[imgKey]}
                           alt={`Image ${imgKey}`}
                         />

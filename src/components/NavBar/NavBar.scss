@@ -20,22 +20,25 @@
     height: 9.375rem;
     display: flex;
     position: absolute;
-    top: 5rem;
+    top: 3.75rem;
     left: 1.25rem;
   }
   .navContainer {
     width: 100%;
-    height: 10rem;
     display: flex;
+    height: 10rem;
+    
+    align-items: center;
     justify-content: center;
-    align-items: end;
-    gap: 1.875rem;
-    position: absolute;
+    
+    gap: 0;
+    position: relative;
 
     .ulLinks {
       display: flex;
       text-decoration: none;
       list-style: none;
+      padding-top: 3.125rem;
       gap: 1.875rem;
       z-index: 999;
       .liLinks {
@@ -126,17 +129,171 @@
   .iconWhatsappContainer {
     display: flex;
     position: fixed;
-   width: 100%;
+    width: 100%;
     justify-content: flex-end;
     top: 10.625rem;
     z-index: 500;
 
     img {
-      
       width: 3.25rem;
     }
     button {
       z-index: 999;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navBarContainer {
+    position: relative;
+    height: 3.125rem;
+    display: inline;
+    z-index: 999;
+    .btnColapse {
+      position: absolute;
+      z-index: 999;
+      height: 3.125rem;
+      border: none;
+      right: 0;
+      
+    }
+    .navContainer {
+      width: 100%;
+      top: 3.125rem;
+      display: flex;
+      height: fit-content;
+      position: absolute;
+      background-color: white;
+      z-index: 999;
+      justify-content: flex-end;
+      flex-direction: column;
+      gap: 0;
+      .navbar .navbar-toggler {
+        border: none !important; /* Elimina el borde */
+        outline: none !important; /* Elimina el contorno al hacer clic */
+        box-shadow: none !important; /* Elimina cualquier sombra */
+      }
+      a {
+        font-size: 1rem;
+        padding: 0;
+        color: black;
+        font-family: Poppins;
+      }
+      .ulLinks {
+        
+        display: flex;
+        background-color: white;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 1.25rem;
+        z-index: 999;
+        padding-right: .625rem;
+        li {
+          width: 100%;
+          background-color: white;
+          display: flex;
+          justify-content: flex-end;
+
+          .nav-link {
+            color: black;
+            right: 0;
+            background-color: white;
+          }
+        }
+      }
+    }
+    background: linear-gradient(
+      5deg,
+      rgba(47, 157, 71, 0.67) 4.28%,
+      rgba(17, 55, 25, 0.67) 96.32%
+    );
+    background-blend-mode: multiply;
+    a {
+      position: relative;
+      z-index: 999;
+    }
+    .containerLogo {
+      width: 3.125rem;
+      height: 3.125rem;
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0.3125rem;
+      z-index: -2;
+      padding: 0;
+      a {
+        img {
+          width: 3.125rem;
+        }
+      }
+    }
+
+    .loginContainer {
+      display: inline;
+
+      .ulLogin {
+        font-size: 1rem;
+        cursor: pointer;
+        .liLoginFalse {
+          display: none;
+        }
+      }
+
+      .adminContainer {
+        position: relative;
+        display: inline;
+        width: 100%;
+        justify-content: end;
+
+        p {
+          margin: 0;
+        }
+        .loginTrue {
+          border-radius: 50%;
+          width: 2.5rem;
+        }
+        .loginFalse {
+          display: none;
+          width: 0;
+          height: 0;
+        }
+      }
+      .iconContainer {
+        display: inline;
+
+        .iconSocial {
+        }
+      }
+    }
+    .imgCartContainer {
+      display: flex;
+      padding-top: 0.3125rem;
+      height: 3.125rem;
+      align-items: flex-end;
+      margin: 0;
+      .containerWidget {
+        height: 0;
+        .cartWidget {
+          .imgCart {
+          }
+        }
+      }
+    }
+
+    .iconWhatsappContainer {
+      display: flex;
+      position: fixed;
+      width: 100%;
+      justify-content: flex-end;
+      top: 10.625rem;
+      z-index: 500;
+
+      img {
+        width: 3.25rem;
+      }
+      button {
+        z-index: 999;
+      }
     }
   }
 }

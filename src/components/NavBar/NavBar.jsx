@@ -10,8 +10,8 @@ const NavBar = () => {
 
   return (
     <>
-      <section className="navBarContainer">
-        <div className="containerLogo">
+      <section className="navBarContainer navbar navbar-expand-lg navbar-light bg-light">
+        <div className="containerLogo navbar-brand">
           <Link to="/">
             <img
               className="logoNav"
@@ -20,24 +20,32 @@ const NavBar = () => {
             />
           </Link>
         </div>
-        <nav className="navContainer">
-          <ul className="ulLinks">
-            <li className="liLinks">
-              <Link to="/"> Home </Link>
+        <button
+        className="btnColapse navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="btnIco navbar-toggler-icon"></span>
+      </button>
+        <nav className="navContainer collapse navbar-collapse" id="navbarNav">
+          <ul className="ulLinks navbar-nav">
+            <li className="liLinks nav-item">
+              <Link className="nav-link" to="/"> Home </Link>
             </li>
-            <li className="liLinks">
-              <Link to="/products">Productos</Link>
+            <li className="liLinks nav-item">
+              <Link className="nav-link" to="/products">Productos</Link>
             </li>
-            <li className="liLinks">
-              <Link to="/services">Servicios</Link>
+            <li className="liLinks nav-item">
+              <Link className="nav-link" to="/services">Servicios</Link>
             </li>
-            <li className="liLinks">
-              <Link to="/contact">Contacto</Link>
+            <li className="liLinks nav-item">
+              <Link className="nav-link" to="/contact">Contacto</Link>
             </li>
-          </ul>
-        </nav>
-
-        <section className="loginContainer">
+          </ul><section className="loginContainer">
           <ul className="ulLogin">
             <li onClick={login} className="liLogin">
               Login
@@ -78,6 +86,9 @@ const NavBar = () => {
         <div className="imgCartContainer">
           <CartWidget/>
         </div>
+        </nav>
+
+        
         <div className="iconWhatsappContainer">
           <Link to="https://wa.me/59894588350?text=Hola%2C%20estoy%20interesado">
             <img

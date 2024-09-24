@@ -13,8 +13,7 @@ const HomeContainer = () => {
       <section className="backVideo">
         <video autoPlay muted loop src="../../video/videoBack.mp4"></video>
         <div className="buttonContainer">
-          <h1>Promoción de un producto o descuentos en particular</h1>
-          <button>Más info</button>
+          <h1><span className="sCannavis">Cannavis</span>, productos naturales para tu bienestar diario.</h1>
         </div>
       </section>
       <section className="sendSection">
@@ -52,27 +51,35 @@ const HomeContainer = () => {
           <img src="../../img/oil.png" alt="" />
           <h4>Aceite medicinal</h4>
           <p>
-            Mejora automáticamente las fotos  Mejorar calidad de imagen  con un
-            solo clic. Mejorar los colores y la iluminación,  mejorar fotos
-            borrosas  y arregla detalles para sacar
+          El aceite de cannabis, especialmente el que contiene CBD, 
+          ofrece numerosos beneficios medicinales gracias a sus propiedades antiinflamatorias, 
+          analgésicas y neuroprotectoras. Es utilizado para aliviar el dolor crónico, reducir la inflamación, 
+          y mejorar el sueño. Además, ayuda a disminuir la ansiedad y el estrés, 
+          aportando una sensación de calma sin efectos psicoactivos.
           </p>
         </div>
         <div className="imgContainer">
           <img src="../../img/floor.png" alt="" />
-          <h4>Accesorios</h4>
+          <h4>Cannavis</h4>
           <p>
-            Mejora automáticamente las fotos  Mejorar calidad de imagen  con un
-            solo clic. Mejorar los colores y la iluminación,  mejorar fotos
-            borrosas  y arregla detalles para sacar
+          La flor del cannabis es valorada por sus propiedades analgésicas, 
+          antiinflamatorias y relajantes. Es utilizada para aliviar el dolor crónico, 
+          reducir la ansiedad y el estrés, mejorar el sueño y estimular el apetito. 
+          También posee efectos neuroprotectores, antiespasmódicos y ayuda a mitigar náuseas y vómitos, 
+          especialmente en tratamientos médicos como la quimioterapia. 
+          Gracias a su capacidad para tratar una variedad de síntomas
+          , la flor del cannabis se ha convertido en una opción terapéutica natural y versátil.
           </p>
         </div>
         <div className="imgContainer">
           <img src="../../img/cream.png" alt="" />
-          <h4>Cremita de mari</h4>
+          <h4>Crema de cannavis</h4>
           <p>
-            Mejora automáticamente las fotos  Mejorar calidad de imagen  con un
-            solo clic. Mejorar los colores y la iluminación,  mejorar fotos
-            borrosas  y arregla detalles para sacar
+          La crema de cannabis es un producto tópico que alivia el dolor localizado y reduce la inflamación, 
+          siendo efectiva para condiciones como artritis y tendinitis. Proporciona hidratación profunda, 
+          combate el envejecimiento de la piel gracias a sus propiedades antioxidantes y 
+          ayuda en el tratamiento de afecciones cutáneas como psoriasis y eczema. 
+          También es utilizada por atletas para acelerar la recuperación muscular tras el ejercicio.
           </p>
         </div>
       </section>
