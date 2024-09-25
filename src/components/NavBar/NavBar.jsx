@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../Context/AuthContext";
 import CartWidget from "./CartWidget";
