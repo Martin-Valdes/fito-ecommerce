@@ -74,3 +74,92 @@
     }
   }
 }
+
+@media(max-width:768px){
+  .footerBack {
+    
+    .footerContainer {
+     height: fit-content;
+      .upContainer {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: .9375rem;
+        color: #fff;
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        div{
+          img{
+            width: 5rem;
+          }
+        }
+        .ulContainer {
+          width: fit-content;
+          text-decoration: underline;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: space-between;
+          ul {
+            list-style: none;
+            a{
+              text-decoration: none;
+              color: white;
+            }
+            li{
+              cursor: pointer;
+            }
+          }
+          .icoContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+      .downContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: .3125rem;
+        padding-bottom: 1.875rem;
+        gap: 1.25rem;
+        .newContainer{
+          display: flex;
+          justify-content: flex-start;
+          align-items: start;
+          flex-direction: column;
+          div{
+            display: flex;
+            align-items: center;
+            .icoWatsapp{
+              
+              width: 3.125rem;
+            }
+            p{
+              margin: 0;
+            }
+
+          }
+        }
+        div {
+          color: #fff;
+          font-family: Poppins;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          display: flex;
+          justify-content: left;
+          align-items: flex-start;
+          margin-bottom: 0;
+          
+        }
+      }
+    }
+  }
+}

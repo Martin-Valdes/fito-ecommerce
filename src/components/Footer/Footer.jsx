@@ -48,8 +48,8 @@ const Footer = () => {
                 <img src="../../img/location.png" alt="" />
                 <p>Toledo Canelones 275 Bis.</p>
               </div>
-              <div>
-                <img src="../../img/WhatsApp.png" alt="" />
+              <div >
+                <img className="icoWatsapp" src="../../img/WhatsAppFixed.png" alt="" />
                 <p>(+598) 094 588 350</p>
               </div>
               <div className="icoContainer">
@@ -66,9 +66,9 @@ const Footer = () => {
             <div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d819.7063518419042!2d-56.09673606511867!3d-34.73479499392743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDQ0JzA1LjMiUyA1NsKwMDUnNDMuOSJX!5e0!3m2!1ses!2suy!4v1725962197184!5m2!1ses!2suy"
-                width="500"
-                height="350"
-                allowFullScreen=""
+                width="340"
+                height="200"
+                allowFullScreen="true"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>

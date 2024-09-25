@@ -10,7 +10,6 @@
     rgba(47, 157, 71, 0.67) 4.28%,
     rgba(17, 55, 25, 0.67) 96.32%
   );
-  background-blend-mode: multiply;
   a {
     position: relative;
     z-index: 999;
@@ -27,10 +26,10 @@
     width: 100%;
     display: flex;
     height: 10rem;
-    
+
     align-items: center;
     justify-content: center;
-    
+
     gap: 0;
     position: relative;
 
@@ -155,7 +154,6 @@
       height: 3.125rem;
       border: none;
       right: 0;
-      
     }
     .navContainer {
       width: 100%;
@@ -168,11 +166,7 @@
       justify-content: flex-end;
       flex-direction: column;
       gap: 0;
-      .navbar .navbar-toggler {
-        border: none !important; /* Elimina el borde */
-        outline: none !important; /* Elimina el contorno al hacer clic */
-        box-shadow: none !important; /* Elimina cualquier sombra */
-      }
+
       a {
         font-size: 1rem;
         padding: 0;
@@ -180,14 +174,13 @@
         font-family: Poppins;
       }
       .ulLinks {
-        
         display: flex;
         background-color: white;
         justify-content: flex-end;
         width: 100%;
         gap: 1.25rem;
         z-index: 999;
-        padding-right: .625rem;
+        padding-right: 0.625rem;
         li {
           width: 100%;
           background-color: white;
@@ -202,16 +195,7 @@
         }
       }
     }
-    background: linear-gradient(
-      5deg,
-      rgba(47, 157, 71, 0.67) 4.28%,
-      rgba(17, 55, 25, 0.67) 96.32%
-    );
-    background-blend-mode: multiply;
-    a {
-      position: relative;
-      z-index: 999;
-    }
+
     .containerLogo {
       width: 3.125rem;
       height: 3.125rem;
@@ -261,8 +245,6 @@
       .iconContainer {
         display: inline;
 
-        .iconSocial {
-        }
       }
     }
     .imgCartContainer {
@@ -273,23 +255,20 @@
       margin: 0;
       .containerWidget {
         height: 0;
-        .cartWidget {
-          .imgCart {
-          }
-        }
+      
       }
     }
 
     .iconWhatsappContainer {
       display: flex;
       position: fixed;
-      width: 100%;
+      width: 97%;
       justify-content: flex-end;
       top: 10.625rem;
       z-index: 500;
-
       img {
         width: 3.25rem;
+        
       }
       button {
         z-index: 999;
