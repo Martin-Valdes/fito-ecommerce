@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../Context/AuthContext";
 import CartWidget from "./CartWidget";
@@ -7,11 +7,22 @@ import "./NavBar.scss";
 
 const NavBar = () => {
   const { login, logout, user } = useContext(authContext);
+  const navbarCollapseRef = useRef(null);
+
+  const closeNavbar = () => {
+    const navbarCollapse = navbarCollapseRef.current;
+    if (navbarCollapse.classList.contains("show")) {
+      const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
+        toggle: true,
+      });
+      bsCollapse.hide();
+    }
+  };
 
   return (
     <>
       <div className="navBarContainer">
-        <section className="navBarContainer navbar navbar-expand-sm navbar-light bg-light">
+        <section className="navBarContainer navbar navbar-expand-lg navbar-light bg-light">
           <div className="containerLogo navbar-brand">
             <Link to="/">
               <img
@@ -34,24 +45,23 @@ const NavBar = () => {
           </button>
           <nav className="navContainer collapse navbar-collapse" id="navbarNav">
             <ul className="ulLinks navbar-nav">
-              <li className="liLinks nav-item">
-                <Link className="nav-link" to="/">
-                  {" "}
-                  Home{" "}
+              <li className="liLinks nav-item ">
+                <Link className="nav-link" to="/" onClick={closeNavbar}>
+                  Home
                 </Link>
               </li>
               <li className="liLinks nav-item">
-                <Link className="nav-link" to="/products">
+                <Link className="nav-link" to="/products" onClick={closeNavbar}>
                   Productos
                 </Link>
               </li>
               <li className="liLinks nav-item">
-                <Link className="nav-link" to="/services">
+                <Link className="nav-link" to="/services" onClick={closeNavbar}>
                   Servicios
                 </Link>
               </li>
               <li className="liLinks nav-item">
-                <Link className="nav-link" to="/contact">
+                <Link className="nav-link" to="/contact" onClick={closeNavbar}>
                   Contacto
                 </Link>
               </li>
@@ -68,7 +78,7 @@ const NavBar = () => {
                   Logout
                 </li>
               </ul>
-              <div className="adminContainer">
+              <div className="adminContainer nav-item">
                 {user.data && user.data.email === "fitogrowshop23@gmail.com" ? (
                   <Link to="/admin">ADMIN</Link>
                 ) : null}
@@ -87,18 +97,19 @@ const NavBar = () => {
                   </>
                 ) : null}
               </div>
-              <div className="iconContainer">
+              <div className="iconContainer nav-item">
                 <Link to="https://www.instagram.com/fitogrowshop?igsh=YWVoMTV6bXJ5dHpi&utm_source=qr">
-                  <img id="iconSocial"
+                  <img
+                    id="iconSocial"
                     className="iconSocial"
                     src="../../img/Instagram.png"
                     alt=""
                   />
                 </Link>
               </div>
-            <div className="imgCartContainer">
-              <CartWidget />
-            </div>
+              <div className="imgCartContainer nav-item ">
+                <CartWidget params={closeNavbar} />
+              </div>
             </section>
           </nav>
         </section>

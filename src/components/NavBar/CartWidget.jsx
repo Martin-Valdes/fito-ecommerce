@@ -5,12 +5,12 @@ import { CartContext } from "../../Context/CartContext";
 
 import "./CartWidget.scss"
 
-const CartWidget = () => {
+const CartWidget = (colapse) => {
   const { cart, allArticle } = useContext(CartContext);
 
   return (
     <div className="containerWidget">
-      <Link to="/cart" className="cartWidget">
+      <Link to="/cart" onClick={colapse} className="cartWidget nav-link">
         <img
           className="imgCart"
           id="imgCart"
