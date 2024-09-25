@@ -40,6 +40,7 @@ const CheckOut = () => {
 
   return (
     <div className="checkOutContainer">
+      <h1>Complete sus datos</h1>
       {status ? (
         <div className="checkOutForm">
           <form onSubmit={sendData}>
@@ -53,6 +54,7 @@ const CheckOut = () => {
               name="name"
               value={dataForm.name}
               onChange={saveDataInput}
+              required
             />
             <div class="mb-3">
               <label htmlFor="tel" class="form-label">
@@ -66,6 +68,7 @@ const CheckOut = () => {
                 name="tel"
                 value={dataForm.tel}
                 onChange={saveDataInput}
+                required
               ></input>
             </div>
             <label htmlFor="email" className="form-label">
@@ -73,11 +76,12 @@ const CheckOut = () => {
             </label>
             <input
               className="form-control"
-              type="text"
+              type="email"
               id="email"
               name="email"
               value={dataForm.email}
               onChange={saveDataInput}
+              required
             />
             <label htmlFor="message" className="form-label">
               Mensaje

@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   margin: 1.25rem;
   gap: 1.875rem;
-  z-index: 999;
+  z-index: 200;
   position: relative;
   .container {
     width: 12.5rem;
@@ -61,4 +61,73 @@
   .container:hover{
     scale: 1.03;
   }
+}
+
+@media(max-width: 768px){
+  .containerProducts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.25rem;
+    gap: 1.875rem;
+    z-index: 200;
+    position: relative;
+    .container {
+      width: 12.5rem;
+      height: 21.875rem;
+      transition: 0.3s;
+      border: none;
+      .imgContainer {
+        .carousel {
+          button {
+            .imgArrow {
+              width: 1rem;
+            }
+            .imgArrowIzquierda {
+              width: 1.75rem;
+            }
+            span {
+              color: black;
+            }
+          }
+        }
+        .imgProduct{
+          height: 10.625rem;
+        }
+      }
+      .containerDescription {
+        button {
+          width: 100%;
+          position: relative;
+          z-index: 999;
+          margin-top: 0.625rem;
+          height: 1.875rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        h2 {
+          font-size: 1.25rem;
+          margin-bottom: 0.625rem;
+          font-weight: 600;
+        }
+        p {
+          font-size: 1rem;
+          margin: 0;
+        }
+        a {
+          text-decoration: none;
+        }
+        .adminMode{
+          display: inline;
+        }
+        .userMode{
+          display: none;
+        }
+      }
+    }
+    .container:hover{
+      scale: 1;
+    }
+  }
+  
 }

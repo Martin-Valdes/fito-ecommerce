@@ -13,6 +13,7 @@ const CartWidget = () => {
       <Link to="/cart" className="cartWidget">
         <img
           className="imgCart"
+          id="imgCart"
           src="../../img/Wheelbarrow.png"
           alt="cartWidget"
         />

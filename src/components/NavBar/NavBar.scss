@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
   width: 100%;
   height: 10rem;
   color: white;
@@ -23,18 +24,19 @@
     left: 1.25rem;
   }
   .navContainer {
-    width: 100%;
+    width: 80%;
     display: flex;
     height: 10rem;
 
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     gap: 0;
     position: relative;
 
     .ulLinks {
       display: flex;
+      position: absolute;
       text-decoration: none;
       list-style: none;
       padding-top: 3.125rem;
@@ -57,6 +59,8 @@
 
   .loginContainer {
     display: flex;
+    right: 0;
+    width: 100%;
     gap: 1.25rem;
     justify-content: flex-end;
     right: 0;
@@ -81,7 +85,8 @@
     .adminContainer {
       position: relative;
       display: flex;
-      width: 100%;
+      flex-direction: column;
+      width: fit-content;
       justify-content: end;
       align-items: center;
       gap: 0.625rem;
@@ -92,6 +97,8 @@
       .loginTrue {
         border-radius: 50%;
         width: 2.5rem;
+        display: flex;
+        flex-direction: column;
       }
       .loginFalse {
         display: none;
@@ -103,11 +110,12 @@
       display: flex;
       height: 5.625rem;
       position: relative;
-      width: 100%;
+      width: fit-content;
       justify-content: flex-end;
       align-items: flex-start;
 
-      .iconSocial {
+      #iconSocial {
+        content: url("../../img/Instagram.png");
         width: 1.875rem;
         height: 1.875rem;
       }
@@ -161,7 +169,7 @@
       display: flex;
       height: fit-content;
       position: absolute;
-      background-color: white;
+      background-color: rgb(255, 255, 255);
       z-index: 999;
       justify-content: flex-end;
       flex-direction: column;
@@ -175,12 +183,14 @@
       }
       .ulLinks {
         display: flex;
-        background-color: white;
+        position: relative;
+        background-color: rgb(255, 255, 255);
         justify-content: flex-end;
         width: 100%;
         gap: 1.25rem;
         z-index: 999;
         padding-right: 0.625rem;
+        padding-top: .625rem;
         li {
           width: 100%;
           background-color: white;
@@ -213,9 +223,18 @@
     }
 
     .loginContainer {
-      display: inline;
-
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-end;
+      padding-top: .625rem;
+      margin-bottom: .625rem;
+      gap: .625rem;
+      color: black;
+      padding-right: .625rem;
       .ulLogin {
+        font-weight: 700;
+        padding-top: 1.875rem;
         font-size: 1rem;
         cursor: pointer;
         .liLoginFalse {
@@ -225,10 +244,10 @@
 
       .adminContainer {
         position: relative;
-        display: inline;
+        display: flex;
         width: 100%;
         justify-content: end;
-
+        
         p {
           margin: 0;
         }
@@ -244,7 +263,12 @@
       }
       .iconContainer {
         display: inline;
-
+        width: fit-content;
+        height: fit-content;
+        #iconSocial{
+          content: url("../../img/instagram768.png");
+          
+        }
       }
     }
     .imgCartContainer {
@@ -255,7 +279,9 @@
       margin: 0;
       .containerWidget {
         height: 0;
-      
+        #imgCart{
+          content: url("../../img/carrito-de-compras.png");
+        }
       }
     }
 

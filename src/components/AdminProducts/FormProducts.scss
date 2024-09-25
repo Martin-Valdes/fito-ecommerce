@@ -1,6 +1,6 @@
 .formContainer {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 1999;
   margin-top: 6.25rem;
   display: flex;
@@ -8,6 +8,7 @@
   align-items: center;
   position: relative;
   z-index: 999;
+  
   form {
     z-index: 999;
     display: flex;
@@ -22,4 +23,36 @@
   .deleteProduct {
     background-color: red;
   }
+}
+
+@media(max-width:48rem){
+  .formContainer {
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    
+    form {
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      padding: .625rem;
+      .formArchive {
+        margin-top: 1.25rem;
+      }
+      button {
+          margin-top: 1.25rem;
+      }
+    }
+    .deleteProduct {
+      background-color: red;
+    }
+  }
+  
 }
