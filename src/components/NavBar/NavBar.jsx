@@ -7,17 +7,7 @@ import "./NavBar.scss";
 
 const NavBar = () => {
   const { login, logout, user } = useContext(authContext);
-  const navbarCollapseRef = useRef(null);
-
-  const closeNavbar = () => {
-    const navbarCollapse = navbarCollapseRef.current;
-    if (navbarCollapse.classList.contains("show")) {
-      const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
-        toggle: true,
-      });
-      bsCollapse.hide();
-    }
-  };
+ 
 
   return (
     <>

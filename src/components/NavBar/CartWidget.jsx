@@ -10,7 +10,7 @@ const CartWidget = (colapse) => {
 
   return (
     <div className="containerWidget">
-      <Link to="/cart" onClick={colapse} className="cartWidget nav-link">
+      <Link to="/cart" className="cartWidget">
         <img
           className="imgCart"
           id="imgCart"
