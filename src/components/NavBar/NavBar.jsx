@@ -98,7 +98,7 @@ const NavBar = () => {
                 </Link>
               </div>
               <div className="imgCartContainer nav-item ">
-                <CartWidget params={closeNavbar} />
+                <CartWidget  />
               </div>
             </section>
           </nav>
