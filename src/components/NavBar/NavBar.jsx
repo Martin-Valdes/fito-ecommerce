@@ -46,22 +46,22 @@ const NavBar = () => {
           <nav className="navContainer collapse navbar-collapse" id="navbarNav">
             <ul className="ulLinks navbar-nav">
               <li className="liLinks nav-item ">
-                <Link className="nav-link" to="/" onClick={closeNavbar}>
+                <Link className="nav-link" to="/" >
                   Home
                 </Link>
               </li>
               <li className="liLinks nav-item">
-                <Link className="nav-link" to="/products" onClick={closeNavbar}>
+                <Link className="nav-link" to="/products" >
                   Productos
                 </Link>
               </li>
               <li className="liLinks nav-item">
-                <Link className="nav-link" to="/services" onClick={closeNavbar}>
+                <Link className="nav-link" to="/services" >
                   Servicios
                 </Link>
               </li>
               <li className="liLinks nav-item">
-                <Link className="nav-link" to="/contact" onClick={closeNavbar}>
+                <Link className="nav-link" to="/contact" >
                   Contacto
                 </Link>
               </li>
