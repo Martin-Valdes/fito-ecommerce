@@ -23,7 +23,7 @@ const NavBar = () => {
             </Link>
           </div>
           <button
-            className="btnColapse navbar-toggler"
+            className="btnColapse "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"

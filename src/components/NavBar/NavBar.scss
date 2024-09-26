@@ -15,6 +15,10 @@
     position: relative;
     z-index: 999;
   }
+  .collapsed, .btnColapse{
+    display: none;
+    
+  }
   .containerLogo {
     width: 6.25rem;
     height: 9.375rem;
@@ -156,17 +160,27 @@
     height: 3.125rem;
     display: inline;
     z-index: 999;
-    .btnColapse {
+    width: 100%;
+    .collapsed, .btnColapse{
+      display: block;
+      width: 3.75rem;
+     background-color:rgba(255, 0, 0, 0);
       position: absolute;
       z-index: 999;
       height: 3.125rem;
+      
+    }
+    .show{
+      background-color:rgba(206, 65, 65, 0);
+    }
+    .btnColapse {
       border: none;
       right: 0;
     }
     .navContainer {
       width: 100%;
       top: 3.125rem;
-      display: flex;
+      display: inline;
       height: fit-content;
       position: absolute;
       background-color: rgb(255, 255, 255);
@@ -174,7 +188,7 @@
       justify-content: flex-end;
       flex-direction: column;
       gap: 0;
-
+      padding: 0 .625rem 1.25rem 0;
       a {
         font-size: 1rem;
         padding: 0;
@@ -273,14 +287,20 @@
     }
     .imgCartContainer {
       display: flex;
-      padding-top: 0.3125rem;
-      height: 3.125rem;
+      padding-top: 0;
+      height: 1.25rem;
       align-items: flex-end;
       margin: 0;
+      width: 2rem;
       .containerWidget {
         height: 0;
         #imgCart{
           content: url("../../img/carrito-de-compras.png");
+
+        }
+        .imgCart{
+          width: 2rem;
+          height: 2rem;
         }
       }
     }
