@@ -8,6 +8,10 @@ import "./NavBar.scss";
 const NavBar = () => {
   const { login, logout, user } = useContext(authContext);
  
+  const closeMenu = () => {
+    const navBar = document.getElementById("navbarNav");
+    navBar.classList.remove("show"); // Remueve la clase `show` del navbar colapsado
+  };
 
   return (
     <>
@@ -36,22 +40,22 @@ const NavBar = () => {
           <nav className="navContainer collapse navbar-collapse" id="navbarNav">
             <ul className="ulLinks navbar-nav">
               <li className="liLinks nav-item ">
-                <Link className="nav-link" to="/" >
+                <Link className="nav-link" to="/" onClick={closeMenu}>
                   Home
                 </Link>
               </li>
               <li className="liLinks nav-item">
-                <Link className="nav-link" to="/products" >
+                <Link className="nav-link" to="/products" onClick={closeMenu}>
                   Productos
                 </Link>
               </li>
               <li className="liLinks nav-item">
-                <Link className="nav-link" to="/services" >
+                <Link className="nav-link" to="/services"  onClick={closeMenu}>
                   Servicios
                 </Link>
               </li>
               <li className="liLinks nav-item">
-                <Link className="nav-link" to="/contact" >
+                <Link className="nav-link" to="/contact" onClick={closeMenu}>
                   Contacto
                 </Link>
               </li>
@@ -98,7 +102,7 @@ const NavBar = () => {
                 </Link>
               </div>
               <div className="imgCartContainer nav-item ">
-                <CartWidget  />
+                <CartWidget closeNav={{closeMenu}} />
               </div>
             </section>
           </nav>
