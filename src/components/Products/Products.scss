@@ -1,5 +1,6 @@
 .products{
   display: flex;
+  flex-direction: column;
   .productsContainer {
     width: 100%;
     display: flex;
@@ -37,4 +38,48 @@
       width: 15.625rem;
       margin-top: 6.25rem;
     }
+}
+
+@media (max-width: 48rem){
+  .products{
+    display: flex;
+    flex-direction: column;
+    .productsContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 200;
+      .searchContainer {
+        margin: 0.625rem;
+        position: relative;
+        z-index: 200;
+        width: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        .searchImg {
+          width: 2.125rem;
+          height: fit-content;
+          padding: 0.125rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .cardsProducts {
+        width: 70%;
+        
+        .card{
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        }
+      }
+     
+    } 
+    .catContainer {
+        width: 15.625rem;
+        margin-top: 1.25rem;
+      }
+  }
 }

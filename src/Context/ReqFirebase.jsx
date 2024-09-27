@@ -7,6 +7,10 @@ const ReqContext = createContext();
 const ReqFirebase = ({ children }) => {
   const [gallery, setGallery] = useState([]);
 
+  
+
+
+  //Funcion para obtener todos los productos
   useEffect(() => {
     const getGallery = async () => {
       try {
