@@ -1,0 +1,24 @@
+.categoryFilterContainer{
+    display: flex;
+    flex-direction: row;
+   
+    ul{
+        padding-top: 6.25rem;
+    }
+}
+
+@media (max-width: 48rem){
+    .categoryFilterContainer{
+        display: flex;
+        flex-direction: column;
+        
+        .buttonContainer{
+            margin-top: 3.125rem;
+        }
+        ul{
+            margin: 0;
+            padding-top: 0;
+            padding-left: 0;
+        }
+    }
+}

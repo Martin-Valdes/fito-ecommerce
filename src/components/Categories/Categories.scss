@@ -1,7 +1,8 @@
 .categoryContainer {
   width: fit-content;
   padding-bottom: 1.25rem;
-  background-color: rgba(0, 0, 255, 0.212);
+  background-color: rgba(0, 255, 136, 0.212);
+  padding-top: 6.25rem;
   h1 {
     text-decoration: underline;
     font-family: Poppins;
@@ -10,9 +11,14 @@
   }
  
   .liContainer {
-    padding-left: 1.25rem;
+    
     font-family: Poppins;
+    
   }
+  a{
+    color: black; 
+    text-decoration: none;
+   }
 
 } 
 .media768{
