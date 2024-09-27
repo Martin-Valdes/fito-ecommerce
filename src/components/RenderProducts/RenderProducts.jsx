@@ -1,45 +1,25 @@
-import React, { useEffect, useState } from "react";
-import {
-  getDocs,
-  getDoc,
-  doc,
-  collection,
-  deleteDoc,
-} from "firebase/firestore";
-import { db } from "../../appFirebase/appFirebase";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ReqContext } from "../../Context/ReqFirebase";
 
 import "./RenderProducts.scss";
 
-const RenderProducts = ({ edit }) => {
-  const [gallery, setGallery] = useState([]);
+const RenderProducts = ({ edit, filterParams }) => {
+  const { gallery, deleteProduct } = useContext(ReqContext);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const getGallery = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "products"));
-        const docs = [];
-        querySnapshot.forEach((doc) => {
-          docs.push({ ...doc.data(), id: doc.id });
-        });
-        setGallery(docs);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getGallery();
-  }, []);
-
-  const deleteProduct = (idProduct) => {
-    const querySnapshot = doc(db, "products", idProduct);
-
-    deleteDoc(querySnapshot);
-  };
+    if (filterParams) {
+      setItems(filterParams);
+    } else {
+      setItems(gallery);
+    }
+  }, [items, gallery]);
 
   return (
     <div className="containerProducts">
-      {gallery.map((list, index) => {
-        const carouselId = `carousel-${index}`; // Generar un ID único para cada carrusel
+      {items.map((list, index) => {
+        const carouselId = `carousel-${index}`;
         return (
           <div className="container card" key={index}>
             <div className="imgContainer">
@@ -70,7 +50,7 @@ const RenderProducts = ({ edit }) => {
                           imgIndex === 0 ? "active" : ""
                         }`}
                       >
-                        <img 
+                        <img
                           className="imgProduct d-block w-100"
                           src={list[imgKey]}
                           alt={`Image ${imgKey}`}

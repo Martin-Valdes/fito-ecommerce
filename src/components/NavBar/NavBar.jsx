@@ -10,7 +10,7 @@ const NavBar = () => {
  
   const closeMenu = () => {
     const navBar = document.getElementById("navbarNav");
-    navBar.classList.remove("show"); // Remueve la clase `show` del navbar colapsado
+    navBar.classList.remove("show"); 
   };
 
   return (
