@@ -1,0 +1,12 @@
+.editContainerForm{
+    margin: 3.125rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    .formContainerEdit{
+        width: 60%;
+
+    }
+}

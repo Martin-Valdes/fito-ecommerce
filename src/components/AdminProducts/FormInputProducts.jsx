@@ -10,8 +10,6 @@ import RenderProducts from "../RenderProducts/RenderProducts.jsx";
 import "./FormProducts.scss";
 
 const FormInputProducts = () => {
-
-  
   let urlImDesc;
   let archivosGuardados = [];
 
@@ -71,6 +69,7 @@ const FormInputProducts = () => {
             saveDataInput={saveDataInput}
             handleFileInput={handleFileInput}
             sendData={sendData}
+           
           />
           <RenderProducts edit={true} />
         </>

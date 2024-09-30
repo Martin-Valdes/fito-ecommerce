@@ -3,7 +3,11 @@ const FormComponent = ({
   saveDataInput,
   sendData,
   handleFileInput,
+  product
+  
+  
 }) => {
+  console.log(product)
   return (
     <div>
       <form onSubmit={sendData}>
@@ -17,6 +21,8 @@ const FormComponent = ({
           name="nameProduct"
           value={dataForm.nameProduct}
           onChange={saveDataInput}
+          
+          placeholder={product?.nameProduct || "Introduzca el nombre del producto"}
         />
         <div class="mb-3">
           <label htmlFor="description" class="form-label">
@@ -29,6 +35,7 @@ const FormComponent = ({
             name="description"
             value={dataForm.description}
             onChange={saveDataInput}
+            placeholder={product?.description || "Introduzca la descripción"}
           ></textarea>
         </div>
         <label htmlFor="cost" className="form-label">
@@ -41,6 +48,7 @@ const FormComponent = ({
           name="cost"
           value={dataForm.cost}
           onChange={saveDataInput}
+          placeholder={product?.cost || "Introduzca el costo"}
         />
         <label htmlFor="category" className="form-label">
           Categoría
@@ -52,6 +60,7 @@ const FormComponent = ({
           name="category"
           value={dataForm.category}
           onChange={saveDataInput}
+          placeholder={product?.category || "Introduzca la categoria"}
         />
         <label htmlFor="stock" className="form-label">
           Stock
@@ -63,6 +72,7 @@ const FormComponent = ({
           name="stock"
           value={dataForm.stock}
           onChange={saveDataInput}
+          placeholder={product?.stock || "stock"}
         />
         <input
           className="formArchive form-control"

@@ -5,7 +5,7 @@ import { ReqContext } from "../../Context/ReqFirebase";
 import "./RenderProducts.scss";
 
 const RenderProducts = ({ edit, filterParams }) => {
-  const { gallery, deleteProduct } = useContext(ReqContext);
+  const { gallery, deleteProduct} = useContext(ReqContext);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -95,6 +95,14 @@ const RenderProducts = ({ edit, filterParams }) => {
               <p>Price: ${list.cost}</p>
               <Link to={`/productDetail/${list.id}`}>
                 <button className="btn btn-dark">Detalles</button>
+              </Link>
+              <Link to={`/editProduct/${list.id}`}>
+              <button
+                // onClick={() => editProduct(list.id, list)}
+                className={!edit ? "userMode" : "adminModeEdit"}
+              >
+                Editar Producto
+              </button>
               </Link>
               <button
                 onClick={() => deleteProduct(list.id)}

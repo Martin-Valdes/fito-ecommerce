@@ -7,7 +7,8 @@
   position: relative;
   .container {
     width: 12.5rem;
-    height: 21.875rem;
+    height: fit-content;
+    padding-bottom: .625rem;
     transition: 0.3s;
     .imgContainer {
       .carousel {
@@ -50,8 +51,13 @@
       a {
         text-decoration: none;
       }
+      .adminModeEdit{
+        display: inline;
+        background-color: rgb(144, 250, 57);
+      }
       .adminMode{
         display: inline;
+        background-color: rgb(247, 49, 0);
       }
       .userMode{
         display: none;

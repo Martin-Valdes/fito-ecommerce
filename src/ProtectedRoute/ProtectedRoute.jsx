@@ -6,7 +6,6 @@ export const ProtectedRoute = ({children}) => {
 
     const { user} = useContext(authContext)
     
-    console.log(user)
     if (!user || !user.data || user.data.email !== 'fitogrowshop23@gmail.com') {
       return <Navigate to="/" />;
     }
