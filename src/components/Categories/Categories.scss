@@ -1,54 +1,51 @@
 .categoryContainer {
   width: fit-content;
-  padding-bottom: 1.25rem;
+  padding-bottom: 6.25rem;
   background-color: rgba(0, 255, 136, 0.212);
-  padding-top: 6.25rem;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
   h1 {
     text-decoration: underline;
     font-family: Poppins;
     font-size: 1.5rem;
-    padding: 1.875rem;
+    padding: 1.25rem;
   }
- 
+
   .liContainer {
-    
     font-family: Poppins;
-    
   }
-  a{
-    color: black; 
+  a {
+    color: black;
     text-decoration: none;
-   }
-
-} 
-.media768{
-  display: none;
- }
-
-@media(max-width:768px){
-  .categoryContainer {
-   display: none;
-  
   }
-  .media768{
+}
+.media768 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .categoryContainer {
+    display: none;
+  }
+  .media768 {
     display: block;
     z-index: 999;
     position: relative;
     font-size: 1.125rem;
-    .catButton{
+    .catButton {
       font-family: Poppins;
       width: fit-content;
       border-radius: 0;
-      background-color: rgba(66, 100, 100, 0.486);
-      padding: .25rem;
+      background-color: rgba(25, 44, 44, 0.486);
+      padding: 0.25rem;
       border: none;
     }
-    a{
-      color: black; 
+    a {
+      color: black;
       text-decoration: none;
-     }
-     .offcanvas{
+    }
+    .offcanvas {
       width: 70%;
-     }
+    }
   }
 }

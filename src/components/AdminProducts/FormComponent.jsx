@@ -83,7 +83,7 @@ const FormComponent = ({
           onChange={handleFileInput}
           multiple
         />
-        <button type="submit" className="btn btn-success">
+        <button type="submit" className="btnSave btn btn-success">
           Cargar
         </button>
       </form>

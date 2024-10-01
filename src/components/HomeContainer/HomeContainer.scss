@@ -1,63 +1,84 @@
 .homeContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   width: 100%;
   height: 100%;
   .backVideo {
+    position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     video {
-      position: absolute;
-      
+      position: relative;
+
       width: 100%;
       z-index: -10;
       top: 0;
     }
-    .buttonContainer {
-      width: fit-content;
-      height: 70%;
-      position: relative;
+  }
+  .buttonContainer {
+    position: absolute;
+    top: 31.25rem;
+    width: 100%;
+    height: 100%;
+    color: white;
+
+    padding-left: 0;
+    align-items: start;
+    h1 {
+      position: absolute;
+      width: 100%;
+      color: #fff;
+      font-family: "Miltonian Tattoo";
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 0;
+      padding-left: 1.25rem;
+      .sCannavis {
+        color: rgb(5, 172, 5);
+        font-size: 3rem;
+      }
+    }
+    button {
+      width: 175px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: 15px;
+      background: rgba(49, 174, 62, 0.26);
       color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 6.25rem;
-      align-items: end;
-      h1 {
-        width: 100%;
-        color: #fff;
-        font-family: "Miltonian Tattoo";
-        font-size: 42px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-top: 12.5rem;
-        .sCannavis{
-          color: rgb(5, 172, 5);
-          font-size: 3rem;
-        }
-      }
-      button {
-        width: 175px;
-        height: 44px;
-        flex-shrink: 0;
-        border-radius: 15px;
-        background: rgba(49, 174, 62, 0.26);
-        color: white;
-        color: #fff;
-        font-family: Poppins;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
+      color: #fff;
+      font-family: Poppins;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .mayoristContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 5rem;
+    width: 100%;
+    margin-top: 0;
+    background: rgb(4, 59, 53);
+    background: linear-gradient(
+      67deg,
+      rgba(4, 59, 53, 1) 0%,
+      rgba(4, 59, 53, 1) 28%,
+      rgba(56, 133, 124, 1) 62%
+    );
+    .wordContainer {
+      color: white;
+      font-size: 2.5rem;
+      font-family: Poppins;
+      font-weight: 600;
     }
   }
   .sendSection {
     width: 100%;
     height: 100%;
-    margin-top: 12.5rem;
+    margin-top: 6.25rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -136,11 +157,11 @@
       line-height: normal;
     }
   }
-  .categoryContainer {
+  .categoryContainerProducts {
     width: 100%;
     display: flex;
-   background-color: white;
-    
+    background-color: white;
+
     gap: 1.875rem;
     .imgContainer {
       display: flex;
@@ -173,34 +194,32 @@
   }
 }
 
-@media (max-width:1000px){
+@media (max-width: 1000px) {
   .homeContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
     height: 100%;
-    .backVideo {
-      width: 100%;
+    .containerBack {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 100%;
-      video {
-        position: absolute;
-        height: auto;
+      .backVideo {
         width: 100%;
-        z-index: -10;
-        top: 0;
+        height: 100%;
+        video {
+          position: relative;
+
+          width: 100%;
+          z-index: -10;
+          top: 0;
+        }
       }
       .buttonContainer {
-        width: fit-content;
-        height: fit-content;
-        position: relative;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: .625rem;
-        align-items: end;
-        margin-top: 20%;
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        padding-left: 0.625rem;
+        margin-top: 0;
         h1 {
           width: fit-content;
           color: #fff;
@@ -210,11 +229,32 @@
           font-weight: 400;
           line-height: normal;
           margin-top: 0;
-          .sCannavis{
+          .sCannavis {
             color: rgb(5, 172, 5);
             font-size: 1.125rem;
           }
         }
+      }
+    }
+    .mayoristContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3.125rem;
+      width: 100%;
+      margin-top: 0;
+      background: rgb(4, 59, 53);
+      background: linear-gradient(
+        67deg,
+        rgba(4, 59, 53, 1) 0%,
+        rgba(4, 59, 53, 1) 28%,
+        rgba(56, 133, 124, 1) 62%
+      );
+      .wordContainer {
+        color: white;
+        font-size: 1rem;
+        font-family: Poppins;
+        font-weight: 600;
       }
     }
     .sendSection {
@@ -225,7 +265,7 @@
       display: flex;
       align-items: center;
       display: flex;
-      padding-right: .625rem;
+      padding-right: 0.625rem;
       margin-top: 20%;
       img {
         width: 90%;
@@ -243,7 +283,7 @@
         display: flex;
         align-items: center;
         .h2 {
-          padding-left: .625rem;
+          padding-left: 0.625rem;
           color: #ffffff;
           font-family: Poppins;
           font-size: 1rem;
@@ -274,17 +314,17 @@
       flex-direction: column;
       justify-content: center;
       h2 {
-        padding-left: .3125rem;
+        padding-left: 0.3125rem;
         color: #fff;
         font-family: "Post No Bills Jaffna ExtraBold";
         font-size: 20px;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
-        padding-top: .625rem;
+        padding-top: 0.625rem;
       }
       p {
-        padding-left: .3125rem;
+        padding-left: 0.3125rem;
         color: #fff;
         font-family: Poppins;
         font-size: 18px;
@@ -293,7 +333,7 @@
         line-height: normal;
       }
       h3 {
-        padding: .625rem;
+        padding: 0.625rem;
         color: #fff;
         font-family: Poppins;
         font-size: 1.25rem;
@@ -302,10 +342,10 @@
         line-height: normal;
       }
     }
-    .categoryContainer {
+    .categoryContainerProducts {
       width: 100%;
       display: flex;
-     flex-direction: column;
+      flex-direction: column;
       align-items: center;
       gap: 0;
       .imgContainer {
@@ -313,7 +353,7 @@
         width: 100%;
         flex-direction: column;
         align-items: center;
-        padding: .9375rem;
+        padding: 0.9375rem;
         img {
           width: 100%;
         }
@@ -338,5 +378,4 @@
       }
     }
   }
-
 }

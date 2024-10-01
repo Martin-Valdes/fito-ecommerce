@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 import "./ButtonsFilters.scss"
 
-const ButtonsFilter = () => {
+const ButtonsFilter = ({filtered}) => {
+  
+ 
 
     const { gallery } = useContext(ReqContext);
   const [category, setCategory] = useState([]);
@@ -18,6 +20,9 @@ const ButtonsFilter = () => {
     });
     setCategory(uniqueCategories);
   }, [gallery]);
+
+ 
+
   return (
     <>
     <div className="media768"> 
@@ -52,7 +57,7 @@ const ButtonsFilter = () => {
         </div>
         
         <div class="offcanvas-body">
-        <Link to="/products"><button className="btnDelete">Borrar filtro <img src="../../img/filtrar.png" alt="" /></button></Link>
+        
         {category.map((element, index) => (
         <div className="liContainer">
           <Link to={`/categoryFilter/${element}`}>
@@ -72,8 +77,8 @@ const ButtonsFilter = () => {
       {}
       <h1>Categorías</h1>
       <div className="filteritemsbtn">
-
-      <Link to="/products"><button className="btnDelete">Borrar filtro</button></Link>
+      
+      {filtered ? (<Link to="/products"><button className="btn btnDelete">Borrar filtro<img src="../../img/filtrar.png" alt="" /></button></Link>): <p></p> }
       {category.map((element, index) => (
         <div className="liContainer">
           <Link to={`/categoryFilter/${element}`}>
