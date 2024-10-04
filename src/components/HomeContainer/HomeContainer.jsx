@@ -46,7 +46,7 @@ const HomeContainer = () => {
         </section>
         <div className="buttonContainer">
           <h1>
-            <span className="sCannavis">Cannavis</span>, productos naturales
+            <span className="sCannavis">Cannabis</span>, productos naturales
             para tu bienestar diario.
           </h1>
         </div>
@@ -97,7 +97,7 @@ const HomeContainer = () => {
         </div>
         <div className="imgContainer">
           <img src="../../img/floor.png" alt="" />
-          <h4>Cannavis</h4>
+          <h4>Cannabis</h4>
           <p>
             La flor del cannabis es valorada por sus propiedades analgésicas,
             antiinflamatorias y relajantes. Es utilizada para aliviar el dolor
@@ -112,7 +112,7 @@ const HomeContainer = () => {
         </div>
         <div className="imgContainer">
           <img src="../../img/cream.png" alt="" />
-          <h4>Crema de cannavis</h4>
+          <h4>Crema de cannabis</h4>
           <p>
             La crema de cannabis es un producto tópico que alivia el dolor
             localizado y reduce la inflamación, siendo efectiva para condiciones
