@@ -14,15 +14,19 @@
 
 @media(max-width: 48rem){
     .carousellContainer{
-        width: 96%;
+        overflow-x: hidden;
     }
     .imgCarrusel{
         width: 3.125rem;
         margin-top: 1.875rem;
-      
+        overflow-x: hidden;
         
         img{
             width: 5rem;
         }
     }
+    .slick-list{
+        overflow-x: hidden;
+    }
+    
 }
