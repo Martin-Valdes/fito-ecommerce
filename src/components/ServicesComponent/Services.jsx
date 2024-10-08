@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Services.scss";
 
@@ -6,8 +7,25 @@ const Services = () => {
   return (
     <div className="servicesContainer">
       <section className="prensCannavis">
-        <h1>Servicio de prensado</h1>
-        <h2>El Arte de la Extracción de Rosin</h2>
+        <div className="textContainer">
+          <div>
+            <h1>Servicio de prensado</h1>
+            <p>
+              El resultado final es un extracto que conserva todo el perfil de
+              terpenos y cannabinoides esenciales, logrando una experiencia
+              superior tanto en sabor como en efectos. Este método asegura una
+              extracción sin solventes, ofreciendo un producto natural y
+              respetuoso con el proceso de producción.
+            </p>
+          </div>
+          <button className="btn btn-primary">
+            <Link to="https://wa.me/59894588350?text=Hola%2C%20estoy%20interesado">
+              Coordinar Visita
+            </Link>
+          </button>
+        </div>
+        <img src="../../img/First-drips-of-rosin.webp" alt="" />
+        {/* <h2>El Arte de la Extracción de Rosin</h2>
         <div className="firstContainer">
           <p className="firstP">
             El proceso comienza con la entrega de la materia prima en su estado
@@ -31,12 +49,7 @@ const Services = () => {
           <br />
         </p>
         <p className="thirtyP">
-          El resultado final es un extracto que conserva todo el perfil de
-          terpenos y cannabinoides esenciales, logrando una experiencia superior
-          tanto en sabor como en efectos. Este método asegura una extracción sin
-          solventes, ofreciendo un producto natural y respetuoso con el proceso
-          de producción.
-        </p>
+        </p> */}
       </section>
     </div>
   );

@@ -84,6 +84,9 @@
           .containerDescription{
             height: 15.625rem;
           }
+          .imgProduct{
+            height: 8.125rem;
+          }
           h2{
             font-size: .875rem;
           }
@@ -96,8 +99,10 @@
         }
         a{
           width: fit-content;
+          height: fit-content;
           .card {
             width: 6.25rem;
+            height: fit-content;
             box-shadow: none;
             margin: 0;
             padding: 0;

@@ -40,7 +40,7 @@ const Contact = () => {
             type="text"
             id="nameProduct"
             name="nameProduct"
-            placeholder="email"
+            placeholder="Email"
           />
           <textarea
             class="formInput message"
