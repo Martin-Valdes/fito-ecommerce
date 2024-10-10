@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { ReqContext } from "../../Context/ReqFirebase";
 import RenderProducts from "../RenderProducts/RenderProducts.jsx";
 import ButtonsFilter from "../ButtonFilters/ButtonsFilter.jsx";
-import { Link } from "react-router-dom";
 
 import "./CategoryFilter.scss";
 

@@ -16,17 +16,20 @@
     z-index: -2;
     filter: grayscale(80%);
   }
+
   .new {
     width: 900px;
     height: 50rem;
     display: flex;
     align-items: center;
   }
+
   .blocksContainer {
     display: flex;
     flex-direction: column;
 
     gap: 10px;
+
     .block {
       display: flex;
       align-items: center;
@@ -39,6 +42,8 @@
       flex-direction: column;
       align-items: center;
       z-index: 999;
+      transition: 0.3s;
+
       h2 {
         color: #fff;
         font-family: Poppins;
@@ -58,6 +63,10 @@
         line-height: normal;
       }
     }
+
+    .block:hover {
+      scale: 1.05;
+    }
   }
 
   .formContainer {
@@ -73,6 +82,7 @@
     background: rgba(40, 71, 43, 0.78);
     margin-top: 0;
     z-index: 500;
+
     .titleContainer {
       display: flex;
       align-items: flex-start;
@@ -90,6 +100,13 @@
 
     .formInput {
       width: 70%;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
     }
 
     .inp {
@@ -125,17 +142,24 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        transition: 0.2s;
+      }
+
+      .buttonSend:hover {
+        scale: 1.05;
+        background-color: rgb(5, 5, 75);
       }
     }
   }
 }
-@media (max-width:48rem){
+
+@media (max-width:48rem) {
   .contactContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-  
+
     .back {
       position: absolute;
       height: 1200px;
@@ -148,6 +172,7 @@
       z-index: -2;
       filter: grayscale(80%);
     }
+
     .new {
       width: 900px;
       height: fit-content;
@@ -155,11 +180,12 @@
       align-items: center;
       margin: 1.25rem;
     }
+
     .blocksContainer {
       display: none;
-      
+
     }
-  
+
     .formContainer {
       position: relative;
       display: flex;
@@ -174,11 +200,12 @@
       background: rgba(40, 71, 43, 0.78);
       margin-top: 0;
       z-index: 500;
+
       .titleContainer {
         display: flex;
         align-items: flex-start;
         width: 70%;
-  
+
         h1 {
           color: #fff;
           font-family: Poppins;
@@ -188,11 +215,11 @@
           line-height: normal;
         }
       }
-  
+
       .formInput {
         width: 100%;
       }
-  
+
       .inp {
         height: 3.125rem;
         font-size: 1rem;
@@ -200,19 +227,19 @@
         font-weight: 600;
         color: rgb(95, 94, 94);
       }
-  
+
       .message {
         font-size: .875rem;
         font-family: Poppins;
         font-weight: 600;
         color: rgb(95, 94, 94);
       }
-  
+
       .buttonContainer {
         display: flex;
         justify-content: center;
         width: 70%;
-  
+
         .buttonSend {
           width: 6.25rem;
           height: 40px;

@@ -4,17 +4,25 @@ import { ReqContext } from "../../Context/ReqFirebase";
 
 import "./RenderProducts.scss";
 
-const RenderProducts = ({ edit, filterParams }) => {
+const RenderProducts = ({ edit, filterParams, filterProducts }) => {
   const { gallery, deleteProduct } = useContext(ReqContext);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    if (filterParams) {
+
+    if (filterProducts) {
+
+      setItems(filterProducts);
+    } else if (filterParams) {
+      console.log(filterParams)
       setItems(filterParams);
-    } else {
+    }
+    if (filterProducts && filterProducts.length <= 0) {
+
       setItems(gallery);
     }
-  }, [items, gallery, filterParams]);
+
+  }, [items, gallery, filterParams, filterProducts]);
 
   return (
     <div className="containerProducts">
@@ -47,9 +55,8 @@ const RenderProducts = ({ edit, filterParams }) => {
                       .map((imgKey, imgIndex) => (
                         <div
                           key={imgKey}
-                          className={`carousel-item ${
-                            imgIndex === 0 ? "active" : ""
-                          }`}
+                          className={`carousel-item ${imgIndex === 0 ? "active" : ""
+                            }`}
                         >
                           <img
                             className="imgProduct d-block w-100"

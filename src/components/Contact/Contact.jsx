@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { FormData } from "./FormData.jsx";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../appFirebase/appFirebase.js";
+
 
 import "./Contact.scss";
 
 const Contact = () => {
+
+  const [dataForm, setDataForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const saveDataInput = (e) => {
+    setDataForm({ ...dataForm, [e.target.name]: e.target.value });
+  };
+  const [idProduct, setIdProduct] = useState("");
+
+  const sendData = (e) => {
+    e.preventDefault();
+    const dataSend = { ...dataForm };
+    const productRef = collection(db, "messages");
+    addDoc(productRef, dataSend).then((res) => setIdProduct(res.id));
+  };
+
   return (
     <div className="contactContainer">
       <div className="back"></div>
@@ -25,33 +48,10 @@ const Contact = () => {
           </div>
         </section>
         <section className="formContainer">
-          <div className="titleContainer">
-            <h1>Envianos tu consulta</h1>
-          </div>
-          <input
-            className="formInput inp"
-            type="text"
-            id="nameProduct"
-            name="nameProduct"
-            placeholder="Nombre"
-          />
-          <input
-            className="formInput inp"
-            type="text"
-            id="nameProduct"
-            name="nameProduct"
-            placeholder="Email"
-          />
-          <textarea
-            class="formInput message"
-            id="message"
-            rows="10"
-            name="message"
-            placeholder="En que podemos ayudarte..."
-          ></textarea>
-          <div className="buttonContainer">
-            <button className="buttonSend">Enviar</button>
-          </div>
+          <FormData
+            dataForm={dataForm}
+            saveDataInput={saveDataInput}
+            sendData={sendData} />
         </section>
       </div>
     </div>

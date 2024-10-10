@@ -7,7 +7,6 @@ const FormComponent = ({
   
   
 }) => {
-  console.log(product)
   return (
     <div>
       <form onSubmit={sendData}>
