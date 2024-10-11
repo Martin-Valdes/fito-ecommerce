@@ -20,7 +20,7 @@ const FormComponent = ({
           name="nameProduct"
           value={dataForm.nameProduct}
           onChange={saveDataInput}
-          
+        
           placeholder={product?.nameProduct || "Introduzca el nombre del producto"}
         />
         <div class="mb-3">
@@ -35,6 +35,7 @@ const FormComponent = ({
             value={dataForm.description}
             onChange={saveDataInput}
             placeholder={product?.description || "Introduzca la descripción"}
+            
           ></textarea>
         </div>
         <label htmlFor="cost" className="form-label">
@@ -48,6 +49,7 @@ const FormComponent = ({
           value={dataForm.cost}
           onChange={saveDataInput}
           placeholder={product?.cost || "Introduzca el costo"}
+          
         />
         <label htmlFor="category" className="form-label">
           Categoría
@@ -60,6 +62,7 @@ const FormComponent = ({
           value={dataForm.category}
           onChange={saveDataInput}
           placeholder={product?.category || "Introduzca la categoria"}
+       
         />
         <label htmlFor="stock" className="form-label">
           Stock
@@ -81,6 +84,7 @@ const FormComponent = ({
           accept="image/*"
           onChange={handleFileInput}
           multiple
+      
         />
         <button type="submit" className="btnSave btn btn-success">
           Cargar

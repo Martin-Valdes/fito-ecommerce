@@ -25,31 +25,7 @@ const Services = () => {
           </button>
         </div>
         <img src="../../img/First-drips-of-rosin.webp" alt="" />
-        {/* <h2>El Arte de la Extracción de Rosin</h2>
-        <div className="firstContainer">
-          <p className="firstP">
-            El proceso comienza con la entrega de la materia prima en su estado
-            óptimo por parte del cultivador. Esta materia se prepara
-            cuidadosamente para ser colocada en una malla de diferentes micras,
-            dependiendo del nivel de filtración deseado, o en un papel
-            siliconado especializado. A continuación, se somete a un prensado
-            utilizando equipos hidráulicos de alta precisión.
-            <br />
-          </p>
-          <img src="../../img/Rosin-Press-Pure-Pressure-.webp" alt="" />
-        </div>
-
-        <p className="secondP">
-          Durante este paso, se aplica una presión controlada en conjunto con
-          una temperatura específica, cuidadosamente ajustada para maximizar el
-          rendimiento y preservar la integridad de los compuestos activos. Este
-          control preciso de la presión y temperatura permite extraer un retorno
-          de la más alta calidad, garantizando un producto puro, limpio y sin
-          contaminantes, ideal para el consumo.
-          <br />
-        </p>
-        <p className="thirtyP">
-        </p> */}
+        
       </section>
     </div>
   );

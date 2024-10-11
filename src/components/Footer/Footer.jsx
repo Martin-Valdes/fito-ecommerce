@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { authContext } from "../../Context/AuthContext";
 
@@ -7,10 +7,21 @@ import "./Footer.scss";
 
 const Footer = () => {
   const { login } = useContext(authContext);
+  const location = useLocation();
+
+  const footerClass = () => {
+    switch (location.pathname) {
+      case '/':
+        return 'footerBack'; // Clase específica para la página de inici
+      default:
+        return 'footerContact'; // Clase por defecto para las demás páginas
+    }
+  };
+  
 
   return (
     <>
-      <section className="footerBack">
+      <section className={footerClass()}>
         <section className="footerContainer">
           <section className="upContainer">
             <div>

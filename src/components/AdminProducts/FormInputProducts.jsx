@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { useState } from "react";
 import Form from "./FormComponent";
 import { db, storage } from "../../appFirebase/appFirebase.js";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import RenderProducts from "../RenderProducts/RenderProducts.jsx";
+import Swal from 'sweetalert2';
 
 
 import "./FormProducts.scss";
@@ -33,6 +33,16 @@ const FormInputProducts = () => {
     const productRef = collection(db, "products");
     addDoc(productRef, dataSend).then((res) => setIdProduct(res.id));
   };
+  useEffect(() => {
+    if (idProduct) {
+      Swal.fire({
+        icon: "success",
+        title: "Mensaje enviado!",
+        text: "A la brevedad nos contactaremos!!",
+        footer: '<a href="/">Ir al inicio</a>',
+      });
+    }
+  }, [idProduct])
 
   ////// Subimos a storage las img.
   const handleFileInput = async (e) => {
@@ -63,13 +73,13 @@ const FormInputProducts = () => {
         </div>
       ) : (
         <>
-        <h1>Nuevo Producto</h1>
+          <h1>Nuevo Producto</h1>
           <Form
             dataForm={dataForm}
             saveDataInput={saveDataInput}
             handleFileInput={handleFileInput}
             sendData={sendData}
-           
+
           />
           <RenderProducts edit={true} />
         </>

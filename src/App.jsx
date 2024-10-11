@@ -17,11 +17,13 @@ import { ProductDetail } from "./components/ProductsDetail/ProductDetail.jsx";
 import { CartProvider } from "./Context/CartContext.jsx";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import { EditProduct } from "./components/AdminProducts/EditProduct.jsx";
+import CategoryFilter from "./components/CategoryFilter/CategoryFilter.jsx";
+
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import CategoryFilter from "./components/CategoryFilter/CategoryFilter.jsx";
+
 
 function App() {
   return (

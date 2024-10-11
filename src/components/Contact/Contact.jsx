@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FormData } from "./FormData.jsx";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../appFirebase/appFirebase.js";
-
+import Swal from 'sweetalert2'
 
 import "./Contact.scss";
 
@@ -24,8 +24,22 @@ const Contact = () => {
     const dataSend = { ...dataForm };
     const productRef = collection(db, "messages");
     addDoc(productRef, dataSend).then((res) => setIdProduct(res.id));
-  };
 
+    
+    
+  };
+  useEffect(() => {
+    if (idProduct) {
+      Swal.fire({
+        icon: "success",
+        title: "Mensaje enviado!",
+        text: "A la brevedad nos contactaremos!!",
+        footer: '<a href="/">Ir al inicio</a>',
+        theme: "Borderless"
+      });
+    }
+  },[idProduct])
+  
   return (
     <div className="contactContainer">
       <div className="back"></div>

@@ -7,14 +7,17 @@
   background-size: 43.75rem, 43.75rem, 43.75rem, 43.75rem;
   background-repeat: repeat, repeat, repeat, repeat;
   position: relative;
+
   .footerContainer {
-    height: 43.75rem;;
+    height: 43.75rem;
+    ;
     width: 100%;
     background: linear-gradient(180deg, #49905aab 0%, #113719c7 100%);
     position: absolute;
     top: 6.25rem;
     left: 0%;
     transform: translate(0%, 12.5rem);
+
     .upContainer {
       display: flex;
       padding: 3.125rem;
@@ -24,40 +27,48 @@
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+
       .ulContainer {
         width: 70%;
         text-decoration: underline;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         ul {
           list-style: none;
-          a{
+
+          a {
             text-decoration: none;
             color: white;
           }
-          li{
+
+          li {
             cursor: pointer;
           }
         }
-        .icoContainer{
+
+        .icoContainer {
           display: flex;
           justify-content: center;
           align-items: center;
         }
       }
     }
+
     .downContainer {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       padding-left: 3.125rem;
-      .newContainer{
+
+      .newContainer {
         display: flex;
         justify-content: flex-start;
         align-items: start;
         flex-direction: column;
       }
+
       div {
         color: #fff;
         font-family: Poppins;
@@ -69,24 +80,113 @@
         justify-content: left;
         align-items: flex-start;
         margin-bottom: 1.25rem;
-        
+
       }
-      div{
-        .mapGoogle{
-        
-         width: 31.25rem;
-         height: 18.75rem;
-       } 
-       }
+
+      div {
+        .mapGoogle {
+
+          width: 31.25rem;
+          height: 18.75rem;
+        }
+      }
     }
   }
 }
 
-@media(max-width:1000px){
-  .footerBack {
-    
+.footerContact {
+  height: fit-content;
+
+  .footerContainer {
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(20, 78, 20, 0.795) ;
+    position: relative;
+    top: 6.25rem;
+    left: 0%;
+
+    .upContainer {
+      display: flex;
+      padding: 3.125rem;
+      color: #fff;
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      .ulContainer {
+        width: 70%;
+        text-decoration: underline;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+
+          li {
+            cursor: pointer;
+          }
+        }
+
+        .icoContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .downContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-left: 3.125rem;
+
+      .newContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        flex-direction: column;
+      }
+
+      div {
+        color: #fff;
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        margin-bottom: 1.25rem;
+
+      }
+
+      div {
+        .mapGoogle {
+
+          width: 31.25rem;
+          height: 18.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:1000px) {
+  .footerContact {
+    box-sizing: none;
     .footerContainer {
-     height: fit-content;
+      height: fit-content;
+      top: 0;
       .upContainer {
         display: flex;
         justify-content: space-around;
@@ -98,11 +198,13 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        div{
-          img{
+
+        div {
+          img {
             width: 5rem;
           }
         }
+
         .ulContainer {
           width: fit-content;
           text-decoration: underline;
@@ -110,23 +212,28 @@
           align-items: flex-start;
           flex-direction: column;
           justify-content: space-between;
+
           ul {
             list-style: none;
-            a{
+
+            a {
               text-decoration: none;
               color: white;
             }
-            li{
+
+            li {
               cursor: pointer;
             }
           }
-          .icoContainer{
+
+          .icoContainer {
             display: flex;
             justify-content: center;
             align-items: center;
           }
         }
       }
+
       .downContainer {
         display: flex;
         flex-direction: column;
@@ -135,24 +242,29 @@
         padding-left: .3125rem;
         padding-bottom: 1.875rem;
         gap: 1.25rem;
-        .newContainer{
+
+        .newContainer {
           display: flex;
           justify-content: flex-start;
           align-items: start;
           flex-direction: column;
-          div{
+
+          div {
             display: flex;
             align-items: center;
-            .icoWatsapp{
-              
+
+            .icoWatsapp {
+
               width: 3.125rem;
             }
-            p{
+
+            p {
               margin: 0;
             }
 
           }
         }
+
         div {
           color: #fff;
           font-family: Poppins;
@@ -164,17 +276,129 @@
           justify-content: left;
           align-items: flex-start;
           margin-bottom: 0;
-          
+
         }
-        div{
-         .mapGoogle{
-         
-          width: 21.25rem;
-          height: 12.5rem;
-        } 
+
+        div {
+          .mapGoogle {
+
+            width: 21.25rem;
+            height: 12.5rem;
+          }
         }
-        
+
       }
     }
   }
+
+  .footerBack {
+
+    .footerContainer {
+      height: fit-content;
+
+      .upContainer {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: .9375rem;
+        color: #fff;
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        div {
+          img {
+            width: 5rem;
+          }
+        }
+
+        .ulContainer {
+          width: fit-content;
+          text-decoration: underline;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: space-between;
+
+          ul {
+            list-style: none;
+
+            a {
+              text-decoration: none;
+              color: white;
+            }
+
+            li {
+              cursor: pointer;
+            }
+          }
+
+          .icoContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      .downContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: .3125rem;
+        padding-bottom: 1.875rem;
+        gap: 1.25rem;
+
+        .newContainer {
+          display: flex;
+          justify-content: flex-start;
+          align-items: start;
+          flex-direction: column;
+
+          div {
+            display: flex;
+            align-items: center;
+
+            .icoWatsapp {
+
+              width: 3.125rem;
+            }
+
+            p {
+              margin: 0;
+            }
+
+          }
+        }
+
+        div {
+          color: #fff;
+          font-family: Poppins;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          display: flex;
+          justify-content: left;
+          align-items: flex-start;
+          margin-bottom: 0;
+
+        }
+
+        div {
+          .mapGoogle {
+
+            width: 21.25rem;
+            height: 12.5rem;
+          }
+        }
+
+      }
+    }
+
+  }
+
 }

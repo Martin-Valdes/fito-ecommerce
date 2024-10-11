@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
+import Swal from 'sweetalert2'
 import {
   getDocs,
   getDoc,
@@ -59,6 +60,22 @@ const ReqFirebase = ({ children }) => {
   const editProduct = async (idProduct, dataProduct) => {
     try {
       await updateDoc(productId(idProduct), dataProduct);
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          }
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Signed in successfully"
+        });
+      
     } catch (error) {
       console.log(error);
     }

@@ -3,12 +3,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-
+  height: 100%;
+  
   .back {
     position: absolute;
     height: 2500px;
     width: 100%;
-    background-image: url("../../img/backCtto.webp");
+    
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background-position: center;
     background-size: cover;
@@ -19,7 +20,7 @@
 
   .new {
     width: 900px;
-    height: 50rem;
+    height: 60rem;
     display: flex;
     align-items: center;
   }
@@ -164,13 +165,8 @@
       position: absolute;
       height: 1200px;
       width: 100%;
-      background-image: url("../../img/backCtto.webp");
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
       z-index: -2;
-      filter: grayscale(80%);
+      box-shadow: none;
     }
 
     .new {

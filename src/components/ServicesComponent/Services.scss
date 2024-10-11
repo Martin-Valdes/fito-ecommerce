@@ -51,3 +51,60 @@
     }
   }
 }
+
+@media(max-width:48rem ){
+  .servicesContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;flex-direction: column;
+    margin-top: 3.125rem;
+    .prensCannavis {
+      width: 90%;
+      gap: 1.875rem;
+      margin-top:0;
+      img {
+        display: none;
+        width: 100%;
+        margin-left:0;
+        border-radius: 0 3.125rem 0 3.125rem;
+      }
+      .textContainer {
+        display: flex;
+        align-items: flex-end;
+        width: 99%;
+        height: fit-content;
+        position: relative;
+        flex-direction: row;
+        margin-right: 0;
+        background-color: rgba(97, 34, 139, 0.582);
+        padding: .625rem;
+        border-radius: 0 3.125rem 0 3.125rem;
+        h1 {
+          font-size: 1.25rem;
+          font-family: Poppins;
+          color: rgb(76, 21, 148);
+        }
+        p {
+          font-size: 1rem;
+          font-family: Poppins;
+          color: white;
+          padding-bottom: 3.125rem;
+        }
+        button {
+          position: absolute;
+          height: 1.875rem;
+          right: 0.625rem;
+          display: flex;
+          align-items: center;
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-family: Poppins;
+          }
+        }
+      }
+    }
+  }
+}

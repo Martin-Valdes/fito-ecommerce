@@ -17,6 +17,7 @@ export const FormData = ({
                     onChange={saveDataInput}
                     value={dataForm.name}
                     placeholder="Nombre"
+                    required
                 />
                 <input
                     className="formInput inp"
@@ -26,6 +27,7 @@ export const FormData = ({
                     placeholder="Email"
                     onChange={saveDataInput}
                     value={dataForm.email}
+                    required
                 />
                 <textarea
                     class="formInput message"
@@ -35,6 +37,7 @@ export const FormData = ({
                     onChange={saveDataInput}
                     value={dataForm.message}
                     placeholder="En que podemos ayudarte..."
+                    required
                 ></textarea>
                 <div className="buttonContainer">
                     <button type="submit" className="buttonSend">Enviar</button>

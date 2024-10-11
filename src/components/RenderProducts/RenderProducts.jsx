@@ -17,7 +17,7 @@ const RenderProducts = ({ edit, filterParams, filterProducts }) => {
       console.log(filterParams)
       setItems(filterParams);
     }
-    if (filterProducts && filterProducts.length <= 0) {
+    if (filterProducts && filterProducts.length <= 0 || edit==true) {
 
       setItems(gallery);
     }

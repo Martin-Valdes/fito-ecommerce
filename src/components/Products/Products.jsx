@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import RenderProducts from "../RenderProducts/RenderProducts";
 import Categories from "../Categories/Categories";
 import { ReqContext } from "../../Context/ReqFirebase";
-
+import Swal from 'sweetalert2'
 
 import "./Products.scss";
 
@@ -26,6 +26,14 @@ const Products = () => {
   const searchProducts = (e) => {
     e.preventDefault();
     setProductsFilter(productsFiltered)
+    if(productsFiltered.length<=0){
+      Swal.fire({
+        title: 'Lo siento',
+        text: 'No existen productos con esa descripción',
+        icon: 'warning',
+        confirmButtonText: 'Close'
+      })
+    }
   };
 
   const deleteFilter = (e) => {
@@ -33,8 +41,6 @@ const Products = () => {
     setDataForm({ category: "" }); 
     setProductsFilter([]); 
   }
-
-
 
   return (
     <div className="products">
@@ -56,7 +62,7 @@ const Products = () => {
             <button type="submit" ><img
               className="searchImg btn input-group-text"
               id="inputGroupPrepend2"
-              src="../../img/search.svg"
+              src="../../img/searchImg.png"
               alt=""
             /></button>
             <button onClick={deleteFilter} className={productsFilter.length > 0 ? "buttonCloseFilter btn": "buttonCloseFilterNone "}> Quitar Filtro</button>
