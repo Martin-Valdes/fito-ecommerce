@@ -8,49 +8,59 @@
   gap: 1.875rem;
   z-index: 200;
   position: relative;
+
   a {
     text-decoration: none;
     width: 12.5rem;
     height: 28.125rem;
     padding-bottom: 0.625rem;
     transition: 0.3s;
+
     .container {
       width: 12.5rem;
       height: 28.125rem;
       padding-bottom: 0.625rem;
       transition: 0.3s;
       border: none;
+
       .imgContainer {
         .carousel {
           .carousel-indicators {
             display: none;
           }
+
           button {
             .imgArrow {
               width: 1rem;
             }
+
             .imgArrowIzquierda {
               width: 1.75rem;
             }
+
             span {
               color: black;
             }
           }
         }
+
         .imgProduct {
           height: 10.625rem;
         }
       }
+
       .containerDescription {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         height: 18.75rem;
         text-decoration: none;
-        a{
+
+        a {
           width: 100%;
           height: fit-content;
         }
+
         button {
           width: 100%;
           position: relative;
@@ -61,6 +71,7 @@
           align-items: center;
           justify-content: center;
         }
+
         h2 {
           text-decoration: none;
           font-size: 1.25rem;
@@ -68,11 +79,13 @@
           margin-bottom: 0.625rem;
           font-weight: 600;
         }
+
         p {
           font-family: Poppins;
           font-size: 0.875rem;
           margin: 0;
         }
+
         .costP {
           display: flex;
           justify-content: center;
@@ -80,23 +93,31 @@
           font-weight: 500;
           margin: 0.625rem;
         }
+
         .dacP {
           color: green;
           font-family: Poppins;
           font-size: 0.75rem;
           font-weight: 500;
         }
+
         a {
           text-decoration: none;
         }
+
         .adminModeEdit {
           display: inline;
-          background-color: rgb(144, 250, 57);
+
+          button {
+            background-color: rgb(144, 250, 57);
+          }
         }
+
         .adminMode {
           display: inline;
           background-color: rgb(247, 49, 0);
         }
+
         .userMode {
           display: none;
         }
@@ -113,29 +134,35 @@
     gap: 1.875rem;
     z-index: 200;
     position: relative;
+
     .container {
       width: 12.5rem;
       height: 25rem;
       transition: 0.3s;
       border: none;
+
       .imgContainer {
         .carousel {
           button {
             .imgArrow {
               width: 1rem;
             }
+
             .imgArrowIzquierda {
               width: 1.75rem;
             }
+
             span {
               color: black;
             }
           }
         }
+
         .imgProduct {
           height: 10.625rem;
         }
       }
+
       .containerDescription {
         button {
           width: 100%;
@@ -147,21 +174,26 @@
           align-items: center;
           justify-content: center;
         }
+
         h2 {
           font-size: 1.25rem;
           margin-bottom: 0.625rem;
           font-weight: 600;
         }
+
         p {
           font-size: 1rem;
           margin: 0;
         }
+
         a {
           text-decoration: none;
         }
+
         .adminMode {
           display: inline;
         }
+
         .userMode {
           display: none;
         }

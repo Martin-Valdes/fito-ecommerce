@@ -80,7 +80,7 @@
     width: 675px;
     height: fit-content;
     flex-shrink: 0;
-    background: rgba(40, 71, 43, 0.78);
+    background: rgb(40, 71, 43);
     margin-top: 0;
     z-index: 500;
 
@@ -189,19 +189,19 @@
       margin-left: 0;
       margin-top: 1.25rem;
       padding: .625rem;
-      gap: 1.875rem;
+      gap: .625rem;
       width: 100%;
       height: fit-content;
       flex-shrink: 0;
-      background: rgba(40, 71, 43, 0.78);
+      background: rgb(40, 71, 43);
       margin-top: 0;
       z-index: 500;
 
       .titleContainer {
         display: flex;
-        align-items: flex-start;
-        width: 70%;
-
+        align-items: center;
+        justify-content: center;
+        width: 100%;
         h1 {
           color: #fff;
           font-family: Poppins;
