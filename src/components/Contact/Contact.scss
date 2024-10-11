@@ -169,17 +169,33 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-
-    .back {
-      position: absolute;
-      height: 1200px;
-      width: 100%;
-      z-index: -2;
-      box-shadow: none;
+    flex-direction: column;
+    gap: .625rem;
+    .videoContainer{
+      width: 18.75rem;
+      height: 37.5rem;
+      margin-left:0;
+      animation: float 1s ease-in-out infinite;
+      order: 2;
+      video{
+        width: 18.75rem;
+        height: 37.5rem;
+        
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px); 
+        }
+        100% {
+          transform: translateY(0); 
+        }
+      }
     }
-
     .new {
-      width: 900px;
+      width: fit-content;
       height: fit-content;
       display: flex;
       align-items: center;
