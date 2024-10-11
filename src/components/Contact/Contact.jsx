@@ -42,7 +42,10 @@ const Contact = () => {
   
   return (
     <div className="contactContainer">
-      <div className="back"></div>
+      <div className="videoContainer">
+        <video autoPlay src="../../img/videoEnvios.mp4">
+        </video>
+      </div>
       <div className="new">
         <section className="blocksContainer">
           <div className="block">

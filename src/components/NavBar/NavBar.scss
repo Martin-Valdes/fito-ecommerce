@@ -26,6 +26,18 @@
     position: absolute;
     top: .9375rem;
     left: 1.25rem;
+    animation: rotate 5s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(-19deg);
+    }
+    20% {
+      transform: rotate(20deg); /* Rotación completa */
+    }
+    0% {
+      transform: rotate(0deg); /* Rotación completa */
+    }
   }
   .navContainer {
     width: 80%;
@@ -53,9 +65,19 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        transition: 0.3s ease;
         a {
           color: white;
           text-decoration: none;
+        }
+      
+        a:hover{
+          color: rgb(4, 43, 31);
+      
+          text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), /* Sombra principal */
+          -2px -2px 2px rgba(255, 255, 255, 0.3), /* Sombra invertida clara */
+          0px 0px 10px rgba(0, 255, 0, 0.7); /* Efecto neón */;
+          
         }
       }
     }
@@ -141,10 +163,10 @@
     display: flex;
     justify-content: flex-end;
     position: fixed;
-    width: 50%;
+    width: fit-content;
     right: .9375rem;
     top: 6.25rem;
-    z-index: 5;
+    z-index: 1000;
     a{
       width: fit-content;
       z-index: 1;
@@ -313,12 +335,15 @@
 
     .iconWhatsappContainer {
       display: flex;
+      top: 31.25rem;
       justify-content: flex-end;
+      align-items: flex-end;
       position: fixed;
-      width: 50%;
+      width: fit-content;
+      height: fit-content;
       right: .9375rem;
-      top: 3.125rem;
-      z-index: 5;
+      bottom: 100px;
+      z-index: -5;
       a{
         width: fit-content;
         z-index: 1;
