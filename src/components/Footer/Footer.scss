@@ -10,7 +10,6 @@
 
   .footerContainer {
     height: 43.75rem;
-    ;
     width: 100%;
     background: linear-gradient(180deg, #49905aab 0%, #113719c7 100%);
     position: absolute;
@@ -29,7 +28,7 @@
       line-height: normal;
 
       .ulContainer {
-        width: 70%;
+        width: 50%;
         text-decoration: underline;
         display: flex;
         align-items: center;
@@ -67,6 +66,9 @@
         justify-content: flex-start;
         align-items: start;
         flex-direction: column;
+        .icoWatsapp{
+          width: 3.125rem;
+        }
       }
 
       div {
@@ -116,7 +118,7 @@
       line-height: normal;
 
       .ulContainer {
-        width: 70%;
+        width: 50%;
         text-decoration: underline;
         display: flex;
         align-items: center;
@@ -154,6 +156,9 @@
         justify-content: flex-start;
         align-items: start;
         flex-direction: column;
+        .icoWatsapp{
+          width: 3.125rem;
+        }
       }
 
       div {

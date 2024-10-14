@@ -1,36 +1,43 @@
 .products {
   display: flex;
   flex-direction: row;
-  
+
   .productsContainer {
-    
+
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
     justify-content: center;
     z-index: 200;
-    form{
+
+    form {
       width: 100%;
       display: flex;
       height: 40px;
       border-radius: 100px;
-      gap: 5px;
-      .form-control{
-        border-radius: 100px;
+
+      display: flex;
+      align-items: center;
+
+      .form-control {
+        border-radius: 6.25rem 0 0 6.25rem;
         border-color: rgba(0, 47, 255, 0.555);
         border-width: 2px;
         background-color: rgba(28, 69, 252, 0.116);
         font-family: Poppins;
         font-weight: 600;
       }
-      button{
+
+      button {
         border: none;
-        background-color: rgba(25, 0, 255, 0.801);
-        border-radius: 100px;
+        background-color: rgba(17, 35, 201, 0.699);
+        height: 100%;
+        border-radius: 0 .3125rem .3125rem 0;
       }
-      .buttonCloseFilter{
-        background-color: rgb(255, 102, 0);
+
+      .buttonCloseFilter {
+        background-color: rgba(7, 19, 1, 0.548);
         border-radius: 5px;
         margin-left: 20px;
         width: 150px;
@@ -38,9 +45,10 @@
         font-size: 16px;
         font-family: Poppins;
         padding: 0;
-        
+
       }
-      .buttonCloseFilterNone{
+
+      .buttonCloseFilterNone {
         display: none;
       }
     }
@@ -53,7 +61,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
- 
+
       .searchImg {
         width: 24px;
         height: fit-content;
@@ -63,6 +71,7 @@
         justify-content: center;
       }
     }
+
     .cardsProducts {
       width: 95%;
 
@@ -71,6 +80,7 @@
       }
     }
   }
+
   .catContainer {
     width: 15.625rem;
     margin-top: 6.25rem;
@@ -83,13 +93,15 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+
     .productsContainer {
       width: 100%;
       height: 100%;
       display: flex;
       flex-wrap: wrap;
-      
+
       z-index: 200;
+
       .searchContainer {
         margin: 0.625rem;
         position: relative;
@@ -98,6 +110,7 @@
         display: none;
         align-items: center;
         justify-content: center;
+
         .searchImg {
           width: 2.125rem;
           height: fit-content;
@@ -107,36 +120,45 @@
           justify-content: center;
         }
       }
+
       .cardsProducts {
         display: flex;
         height: fit-content;
         width: 100%;
-        .containerProducts{
+
+        .containerProducts {
           display: flex;
           flex-wrap: wrap;
           gap: 1.25rem;
           width: 100%;
           height: fit-content;
           margin: 0;
-          .containerDescription{
+
+          .containerDescription {
             height: 15.625rem;
           }
-          .imgProduct{
+
+          .imgProduct {
             height: 8.125rem;
           }
-          h2{
+
+          h2 {
             font-size: .875rem;
           }
-          p{
+
+          p {
             font-size: .75rem;
           }
-          .costP{
+
+          .costP {
             font-size: 14px;
           }
         }
-        a{
+
+        a {
           width: fit-content;
           height: fit-content;
+
           .card {
             width: 6.25rem;
             height: fit-content;
@@ -147,6 +169,7 @@
         }
       }
     }
+
     .catContainer {
       width: 15.625rem;
       margin-top: 1.25rem;

@@ -75,7 +75,7 @@ const Footer = () => {
                     alt=""
                   />
                 </Link>
-                <p>Instrabgram</p>
+                <p>Instagram</p>
               </div>
             </div>
             <div>

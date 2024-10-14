@@ -49,6 +49,7 @@ const HomeContainer = () => {
             <span className="sCannavis">Cannabis</span>, productos naturales
             para tu bienestar diario.
           </h1>
+          <p>Naturaleza y ciencia se combinan para brindarte lo mejor del cannabis medicinal y psicoactivo. Explora nuestra selección y siente la diferencia.</p>
         </div>
       </div>
 
